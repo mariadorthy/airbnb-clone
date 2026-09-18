@@ -19,7 +19,7 @@ export const listing = {
     name: "Mirashya Homes",
     yearsHosting: 2,
     avatar:
-      "https://airbnb-clone-umber-two.vercel.app/assets/images/avatars/host.jpeg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgNpLFGB6p_Z7sBjWmeEDX5KMbIDbQRepoNlmIv6_SLw&s=10",
     reviewCount: 1463,
     rating: 4.68,
     responseRate: "100%",
@@ -32,59 +32,192 @@ export const listing = {
    * The first five images are used by the main listing gallery.
    * The remaining reference images are used by the Photo Tour.
    */
+
   images: [
-    {
-      id: "living-room-2",
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
-      alt: "Living room with sofa, air conditioning and ceiling fan",
-    },
-    {
-      id: "living-room-1",
+  {
+    id: "living-room-1-1",
     src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
-      alt: "Living area with dining space",
-    },
-    {
-      id: "kitchen",
-    src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
-      alt: "Full kitchen",
-    },
-    {
-      id: "bedroom",
-    src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=85",
-      alt: "Bedroom with double bed",
-    },
-    {
-      id: "exterior",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-      alt: "Exterior of the property",
-    },
-      {
-    id: "bathroom",
-    src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
-    alt: "Modern bathroom with shower",
-  },
-  {
-    id: "gym",
-    src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
-    alt: "Modern gym with exercise equipment",
-  },
-    {
-    id: "pool",
-    src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
-    alt: "Resort swimming pool",
-  },
-  {
-    id: "additional-1",
-    src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
-    alt: "Apartment interior",
-  },
-  {
-    id: "additional-2",
-  src: "https://images.unsplash.com/photo-1600607688970-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
-    alt: "Property interior and exterior view",
+    alt: "Living area with dining space",
   },
 
-  ],
+  {
+    id: "living-room-1-2",
+    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room with sofa",
+  },
+
+   {
+    id: "living-room-1-3",
+    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living area with dining space",
+  },
+
+  {
+    id: "living-room-2-1",
+    src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+    alt: "Second living room",
+  },
+    {
+    id: "living-room-2-2",
+    src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+    alt: "Second living room",
+  },
+
+  {
+    id: "living-room-2-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+    {
+    id: "kitchen-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "kitchen-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "kitchen-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+  
+    {
+    id: "bedroom-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "bedroom-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "bedroom-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+  
+    {
+    id: "bathroom-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "bathroom-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "bathroom-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+  
+    {
+    id: "gym-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "gym-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "gym-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+  
+    {
+    id: "exterior-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "exterior-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "exterior-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+  
+    {
+    id: "pool-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "pool-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "pool-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+  
+    {
+    id: "additional-photos-1-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "additional-photos-1-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "additional-photos-1-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+    {
+    id: "additional-photos-2-1",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "additional-photos-2-2",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+      {
+    id: "additional-photos-2-3",
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    alt: "Living room additional view",
+  },
+
+],
 
   highlights: [
     {
@@ -108,8 +241,12 @@ export const listing = {
     "Some info has been automatically translated. Show original",
 
   description: [
-    "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors. Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. ❤️🌴",
-  ],
+  "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind.",
+
+  "Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors.",
+
+  "Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. ❤️🌴",
+],
 
   sleepingArrangements: [
     {
@@ -121,6 +258,7 @@ export const listing = {
       beds: "1 sofa",
     },
   ],
+    amenityCount: 50,
 
   amenities: [
     "Kitchen",
@@ -239,134 +377,329 @@ export const listing = {
       ],
     },
   ],
-
+  
   photoTourSections: [
-    {
-      id: "living-room-1",
-      title: "Living room 1",
-      image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
-      description:
-        "Sofa · Air conditioning · Ceiling fan · TV",
-      details: [
-        "Sofa",
-        "Air conditioning",
-        "Ceiling fan",
-        "TV",
-      ],
-    },
-    {
-      id: "living-room-2",
-      title: "Living room 2",
-      image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
-      description:
-        "Ceiling fan · Hot tub",
-      details: [
-        "Ceiling fan",
-        "Hot tub",
-      ],
-    },
-    {
-      id: "full-kitchen",
-      title: "Full kitchen",
-      image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
-      description:
-        "Freezer · Fridge · Blender · Cooker · Cooking basics · Kettle · Microwave · Toaster · Wine glasses · Coffee · Crockery and cutlery",
-      details: [
-        "Freezer",
-        "Fridge",
-        "Blender",
-        "Cooker",
-        "Cooking basics",
-        "Kettle",
-        "Microwave",
-        "Toaster",
-        "Wine glasses",
-        "Coffee",
-        "Crockery and cutlery",
-      ],
-    },
-    {
-      id: "bedroom",
-      title: "Bedroom",
-      image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=85",
-      description:
-        "Double bed · Air conditioning · Bed linen · Ceiling fan · Clothes storage · Cot · Hangers · Iron · Room-darkening blinds",
-      details: [
-        "Double bed",
-        "Air conditioning",
-        "Bed linen",
-        "Ceiling fan",
-        "Clothes storage",
-        "Cot",
-        "Hangers",
-        "Iron",
-        "Room-darkening blinds",
-        "Cleaning available during stay",
-        "Cleaning products",
-        "Long-term stays allowed",
-        "Private entrance",
-        "Wifi",
-      ],
-    },
-    {
-      id: "full-bathroom",
-      title: "Full bathroom",
-      image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
-      description:
-        "Hairdryer · Hot water · Shampoo · Shower gel",
-      details: [
-        "Hairdryer",
-        "Hot water",
-        "Shampoo",
-        "Shower gel",
-      ],
-    },
-    {
-      id: "gym",
-      title: "Gym",
-      image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
-      description:
-        "Air conditioning · Gym · Exercise equipment · Ceiling fan",
-      details: [
-        "Air conditioning",
-        "Gym",
-        "Exercise equipment",
-        "Ceiling fan",
-      ],
-    },
-    {
-      id: "exterior",
-      title: "Exterior",
-      image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-      description: "Exterior of the property",
-      details: [],
-    },
-    {
-      id: "pool",
-      title: "Pool",
-      image:
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
-      description: "Pool area",
-      details: [],
-    },
-    {
-      id: "additional-photos",
-      title: "Additional photos",
-      image:
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
-      description: "Additional property photos",
-      details: [],
-    },
-  ],
+  {
+    id: "living-room-1",
+    title: "Living room 1",
+    description: "Sofa · Air conditioning · Ceiling fan · TV",
+    details: [
+      "Sofa",
+      "Air conditioning",
+      "Ceiling fan",
+      "TV",
+    ],
+    images: [
+      {
+        imageId: "living-room-1-1",
+        image:
+          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
+        alt: "Living room with sofa and dining area",
+      },
+      {
+        imageId: "living-room-1-2",
+        image:
+          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+        alt: "Living room interior",
+      },
+      {
+        imageId: "living-room-1-3",
+        image:
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+        alt: "Living room and apartment interior",
+      },
+    ],
+  },
 
-  ratingBreakdown: [
+  {
+    id: "living-room-2",
+    title: "Living room 2",
+    description: "Ceiling fan · Hot tub",
+    details: [
+      "Ceiling fan",
+      "Hot tub",
+    ],
+    images: [
+      {
+        imageId: "living-room-2-1",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Living room with hot tub",
+      },
+      {
+        imageId: "living-room-2-2",
+        image:
+          "https://images.unsplash.com/photo-1600607688970-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Second view of living room",
+      },
+      {
+        imageId: "living-room-2-3",
+        image:
+          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+        alt: "Living room seating area",
+      },
+    ],
+  },
+
+  {
+    id: "full-kitchen",
+    title: "Full kitchen",
+    description:
+      "Freezer · Fridge · Blender · Cooker · Cooking basics · Kettle · Microwave · Toaster · Wine glasses · Coffee · Crockery and cutlery",
+    details: [
+      "Freezer",
+      "Fridge",
+      "Blender",
+      "Cooker",
+      "Cooking basics",
+      "Kettle",
+      "Microwave",
+      "Toaster",
+      "Wine glasses",
+      "Coffee",
+      "Crockery and cutlery",
+    ],
+    images: [
+      {
+        imageId: "kitchen-1",
+        image:
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
+        alt: "Full kitchen",
+      },
+      {
+        imageId: "kitchen-2",
+        image:
+          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
+        alt: "Kitchen interior",
+      },
+      {
+        imageId: "kitchen-3",
+        image:
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+        alt: "Kitchen and dining area",
+      },
+    ],
+  },
+
+  {
+    id: "bedroom",
+    title: "Bedroom",
+    description:
+      "Double bed · Air conditioning · Bed linen · Ceiling fan · Clothes storage · Cot · Hangers · Iron · Room-darkening blinds",
+    details: [
+      "Double bed",
+      "Air conditioning",
+      "Bed linen",
+      "Ceiling fan",
+      "Clothes storage",
+      "Cot",
+      "Hangers",
+      "Iron",
+      "Room-darkening blinds",
+      "Cleaning available during stay",
+      "Cleaning products",
+      "Long-term stays allowed",
+      "Private entrance",
+      "Wifi",
+    ],
+    images: [
+      {
+        imageId: "bedroom-1",
+        image:
+          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=85",
+        alt: "Bedroom with double bed",
+      },
+      {
+        imageId: "bedroom-2",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Bedroom interior",
+      },
+      {
+        imageId: "bedroom-3",
+        image:
+          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+        alt: "Bedroom and interior view",
+      },
+    ],
+  },
+
+  {
+    id: "full-bathroom",
+    title: "Full bathroom",
+    description:
+      "Hairdryer · Hot water · Shampoo · Shower gel",
+    details: [
+      "Hairdryer",
+      "Hot water",
+      "Shampoo",
+      "Shower gel",
+    ],
+    images: [
+      {
+        imageId: "bathroom-1",
+        image:
+          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
+        alt: "Modern bathroom with shower",
+      },
+      {
+        imageId: "bathroom-2",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Bathroom interior",
+      },
+      {
+        imageId: "bathroom-3",
+        image:
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+        alt: "Bathroom and interior",
+      },
+    ],
+  },
+
+  {
+    id: "gym",
+    title: "Gym",
+    description:
+      "Air conditioning · Gym · Exercise equipment · Ceiling fan",
+    details: [
+      "Air conditioning",
+      "Gym",
+      "Exercise equipment",
+      "Ceiling fan",
+    ],
+    images: [
+      {
+        imageId: "gym-1",
+        image:
+          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
+        alt: "Modern gym with exercise equipment",
+      },
+      {
+        imageId: "gym-2",
+        image:
+          "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=85",
+        alt: "Gym equipment",
+      },
+      {
+        imageId: "gym-3",
+        image:
+          "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=85",
+        alt: "Fitness area",
+      },
+    ],
+  },
+
+  {
+    id: "exterior",
+    title: "Exterior",
+    description: "Exterior of the property",
+    details: [],
+    images: [
+      {
+        imageId: "exterior-1",
+        image:
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+        alt: "Exterior of the property",
+      },
+      {
+        imageId: "exterior-2",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Property exterior view",
+      },
+      {
+        imageId: "exterior-3",
+        image:
+          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+        alt: "Apartment exterior and surroundings",
+      },
+    ],
+  },
+
+  {
+    id: "pool",
+    title: "Pool",
+    description: "Pool area",
+    details: [],
+    images: [
+      {
+        imageId: "pool-1",
+        image:
+          "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
+        alt: "Resort swimming pool",
+      },
+      {
+        imageId: "pool-2",
+        image:
+          "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1400&q=85",
+        alt: "Swimming pool area",
+      },
+      {
+        imageId: "pool-3",
+        image:
+          "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=85",
+        alt: "Outdoor pool",
+      },
+    ],
+  },
+
+  {
+    id: "additional-photos-1",
+    title: "Additional photos 1",
+    description: "Additional property photos",
+    details: [],
+    images: [
+      {
+        imageId: "additional-1-1",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Apartment interior",
+      },
+      {
+        imageId: "additional-1-2",
+        image:
+          "https://images.unsplash.com/photo-1600607688970-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Property interior",
+      },
+      {
+        imageId: "additional-1-3",
+        image:
+          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+        alt: "Apartment living area",
+      },
+    ],
+  },
+
+  {
+    id: "additional-photos-2",
+    title: "Additional photos 2",
+    description: "Additional property photos",
+    details: [],
+    images: [
+      {
+        imageId: "additional-2-1",
+        image:
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+        alt: "Property interior and exterior view",
+      },
+      {
+        imageId: "additional-2-2",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+        alt: "Apartment interior",
+      },
+      {
+        imageId: "additional-2-3",
+        image:
+          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
+        alt: "Living and dining area",
+      },
+    ],
+  },
+],
+
+ratingBreakdown: [
     {
       label: "Cleanliness",
       rating: 5.0,
@@ -442,7 +775,7 @@ export const listing = {
       name: "Amit",
       hosting: "2 months on Airbnb",
       date: "1 week ago",
-  avatar: "https://i.pravatar.cc/150?img=32",
+  avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHoD3KCX8lOH_7Q18ni2N6SzMNi5XJHwB4X2pQizU6w&s=10",
       text:
         "Very helpful and responsive team. Safe and peaceful stay. loved everything about the property.",
     },
@@ -452,7 +785,7 @@ export const listing = {
       hosting: "3 years on Airbnb",
       date: "2 weeks ago",
       avatar:
-        "https://airbnb-clone-umber-two.vercel.app/assets/images/avatars/rev2.jpeg",
+        "https://cdn.picsandprompts.com/prompt-images/professional/confident-man-in-black-suit-professional-headshot-1785588500141-znppledx.webp",
       text:
         "We had a wonderful stay. The apartment was clean, comfortable, and exactly as shown in the photos. The host was very responsive and helpful throughout our stay. We would definitely recommend this place and would love to stay here again.",
     },
@@ -462,7 +795,7 @@ export const listing = {
       hosting: "8 months on Airbnb",
       date: "May 2026",
       avatar:
-        "https://airbnb-clone-umber-two.vercel.app/assets/images/avatars/rev3.jpeg",
+        "https://i.pravatar.cc/150?img=32",
       text: "the host nitish was really great help",
     },
     {
@@ -471,7 +804,7 @@ export const listing = {
       hosting: "4 years on Airbnb",
       date: "May 2026",
       avatar:
-        "https://airbnb-clone-umber-two.vercel.app/assets/images/avatars/rev4.jpeg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXj59xMxMPf-VvXCrfzOMpLxoFifTHqcuc-1_0ytH0hg&s=10",
       text:
         "The home was spotless and exactly as described. We enjoyed the jacuzzi and the stay in Goa and would recommend the property.",
     },
@@ -481,7 +814,7 @@ export const listing = {
       hosting: "3 years on Airbnb",
       date: "May 2026",
       avatar:
-        "https://airbnb-clone-umber-two.vercel.app/assets/images/avatars/rev5.jpeg",
+        "https://media.easy-peasy.ai/a3a8ca90-29b3-4af8-839d-c79fab92c747/5eef9d1c-b833-4150-86ae-9e6b90e36610_medium.webp",
       text:
         "Great great experience living out there, can't expect more, will always look for it in the future and will recommend my friends too.",
     },
@@ -491,7 +824,7 @@ export const listing = {
       hosting: "5 years on Airbnb",
       date: "May 2026",
       avatar:
-        "https://airbnb-clone-umber-two.vercel.app/assets/images/avatars/rev1.jpeg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnRBV7WEdnR0GWyRVC3ygJ1YU0Xm7kdEzKSR6uIfKLk8JoK7CaVQYk4Qk&s=10",
       text:
         "Great place. Exactly as described in the listing.",
     },
@@ -500,6 +833,7 @@ export const listing = {
   locationDetails: {
     title: "Where you'll be",
     location: "Candolim, Goa, India",
+      mapUrl: "https://maps.app.goo.gl/DqegtyazjPQrWJoK8",
     exactLocation:
       "Exact location will be provided after booking.",
     neighbourhoodHighlights:

@@ -73,6 +73,7 @@ function AmenityIcon({ name }) {
     </span>
   );
 }
+
 function Amenities({ amenities, amenityCategories }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -83,7 +84,7 @@ function Amenities({ amenities, amenityCategories }) {
 
   const totalAmenityCount = amenityCategories.reduce(
     (total, category) => total + category.items.length,
-    0,
+    0
   );
 
   const openModal = (event) => {
@@ -125,7 +126,7 @@ function Amenities({ amenities, amenityCategories }) {
 
       const focusableElements =
         modalRef.current?.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
 
       if (!focusableElements?.length) {
@@ -161,7 +162,9 @@ function Amenities({ amenities, amenityCategories }) {
 
   return (
     <>
+      {/* IMPORTANT: id="amenities" is here */}
       <section
+        id="amenities"
         className="content-section"
         aria-labelledby="amenities-title"
       >
@@ -176,22 +179,31 @@ function Amenities({ amenities, amenityCategories }) {
           id="amenities-list"
         >
           {visibleAmenities.map((amenity) => {
-  const isUnavailable = UNAVAILABLE_AMENITIES.has(amenity);
+            const isUnavailable =
+              UNAVAILABLE_AMENITIES.has(amenity);
 
-  return (
-    <div
-      key={amenity}
-      className={`amenity${isUnavailable ? " amenity--unavailable" : ""}`}
-      aria-label={isUnavailable ? `${amenity}, unavailable` : amenity}
-    >
-      <AmenityIcon name={amenity} />
+            return (
+              <div
+                key={amenity}
+                className={`amenity${
+                  isUnavailable
+                    ? " amenity--unavailable"
+                    : ""
+                }`}
+                aria-label={
+                  isUnavailable
+                    ? `${amenity}, unavailable`
+                    : amenity
+                }
+              >
+                <AmenityIcon name={amenity} />
 
-      <span className="amenity__name">
-        {amenity}
-      </span>
-    </div>
-  );
-})}
+                <span className="amenity__name">
+                  {amenity}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
         <button
@@ -258,25 +270,32 @@ function Amenities({ amenities, amenityCategories }) {
                   </h3>
 
                   <div className="amenities-category__grid">
-                   {category.items.map((item) => {
-  const isUnavailable = UNAVAILABLE_AMENITIES.has(item);
+                    {category.items.map((item) => {
+                      const isUnavailable =
+                        UNAVAILABLE_AMENITIES.has(item);
 
-  return (
-    <div
-      key={item}
-      className={`amenity amenity--modal${
-        isUnavailable ? " amenity--unavailable" : ""
-      }`}
-      aria-label={isUnavailable ? `${item}, unavailable` : item}
-    >
-      <AmenityIcon name={item} />
+                      return (
+                        <div
+                          key={item}
+                          className={`amenity amenity--modal${
+                            isUnavailable
+                              ? " amenity--unavailable"
+                              : ""
+                          }`}
+                          aria-label={
+                            isUnavailable
+                              ? `${item}, unavailable`
+                              : item
+                          }
+                        >
+                          <AmenityIcon name={item} />
 
-      <span className="amenity__name">
-        {item}
-      </span>
-    </div>
-  );
-})}
+                          <span className="amenity__name">
+                            {item}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </section>
               ))}

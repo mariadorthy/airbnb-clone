@@ -6,16 +6,25 @@ function Header() {
           <span className="brand__mark" aria-hidden="true">
             ◇
           </span>
-          <span className="brand__name">airbnb</span>
+
+          <span className="brand__name">
+            airbnb
+          </span>
         </a>
 
-        <nav className="primary-nav" aria-label="Primary navigation">
+        <nav
+          className="primary-nav"
+          aria-label="Primary navigation"
+        >
           <a href="#stay">Stays</a>
           <a href="#experiences">Experiences</a>
         </nav>
 
         <div className="header-actions">
-          <a className="host-link" href="#hosting">
+          <a
+            className="host-link"
+            href="#hosting"
+          >
             Airbnb your home
           </a>
 
@@ -32,8 +41,14 @@ function Header() {
             type="button"
             aria-label="Open account menu"
           >
-            <span aria-hidden="true">☰</span>
-            <span className="account-avatar" aria-hidden="true">
+            <span aria-hidden="true">
+              ☰
+            </span>
+
+            <span
+              className="account-avatar"
+              aria-hidden="true"
+            >
               ●
             </span>
           </button>
@@ -44,3 +59,4 @@ function Header() {
 }
 
 export default Header;
+

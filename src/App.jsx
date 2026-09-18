@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 
 import "./App.css";
 
+import ListingStickyNav from "./components/ListingStickyNav";
 import Header from "./components/Header";
 import ListingHeader from "./components/ListingHeader";
 import ImageGallery from "./components/ImageGallery";
@@ -74,6 +75,28 @@ function App() {
     <div className="app">
       <Header />
 
+<ListingStickyNav
+  listing={listing}
+  onReserve={() => {
+    const reservation =
+      document.getElementById("reservation");
+
+    if (!reservation) return;
+
+    const headerOffset = 150;
+
+    const position =
+      reservation.getBoundingClientRect().top +
+      window.scrollY -
+      headerOffset;
+
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
+    });
+  }}
+/>
+
       <main>
         <div className="page-container">
           <ListingHeader listing={listing} />
@@ -144,9 +167,10 @@ function App() {
 
               {/* Photo tour */}
               <section
-                className="content-section"
-                aria-labelledby="photo-tour-section-title"
-              >
+  id="photo-tour"
+  className="content-section"
+  aria-labelledby="photo-tour-section-title"
+>
                 <div className="section-heading">
                   <h2 id="photo-tour-section-title">
                     Take a tour of this home
@@ -166,57 +190,40 @@ function App() {
                   View photo tour
                 </button>
               </section>
+{/* Location */}
+<section
+  id="location"
+  className="content-section location-section"
+>
+  <div className="section-heading">
+    <h2>Where you'll be</h2>
+    <p>{listing.locationDetails.location}</p>
+  </div>
 
-              {/* Location */}
-              <section
-                className="content-section location-section"
-                id="location"
-                aria-labelledby="location-title"
-              >
-                <div className="section-heading">
-                  <h2 id="location-title">
-                    Where you'll be
-                  </h2>
+ <div className="location-map">
+  <iframe
+    title="Map showing Candolim, Goa"
+    src="https://www.google.com/maps?q=Candolim,+Goa,+India&output=embed"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
 
-                  <p>
-                    {listing.locationDetails.location}
-                  </p>
-                </div>
+  <div className="location-info">
+    <p className="location-note">
+      {listing.locationDetails.exactLocation}
+    </p>
 
-                <div
-                  className="map-placeholder"
-                  aria-label="Map showing approximate location in Candolim, Goa"
-                >
-                  <span aria-hidden="true">◎</span>
+  <div className="location-highlights">
+    <h3>Neighbourhood highlights</h3>
 
-                  <strong>
-                    Candolim, Goa
-                  </strong>
-
-                  <p>
-                    {listing.location}
-                  </p>
-                </div>
-
-                <div className="location-info">
-                  <p className="location-note">
-                    {listing.locationDetails.exactLocation}
-                  </p>
-
-                  <div className="location-highlights">
-                    <h3>
-                      Neighbourhood highlights
-                    </h3>
-
-                    <p>
-                      {
-                        listing.locationDetails
-                          .neighbourhoodHighlights
-                      }
-                    </p>
-                  </div>
-                </div>
-              </section>
+    <p>
+      {listing.locationDetails.neighbourhoodHighlights}
+    </p>
+  </div>
+  </div>
+</section>
 
               {/* Reviews */}
               <section
@@ -348,7 +355,7 @@ function App() {
                 </button>
               </section>
 
-            {/* Host */}
+{/* Host */}
 <section
   className="content-section host-section"
   id="host"
@@ -359,6 +366,8 @@ function App() {
   </div>
 
   <div className="host-layout">
+
+    {/* Host profile */}
     <div className="host-profile">
       <img
         src={listing.host.avatar}
@@ -372,6 +381,7 @@ function App() {
       </div>
     </div>
 
+    {/* Host statistics */}
     <div className="host-stats">
       <div>
         <strong>
@@ -388,28 +398,72 @@ function App() {
       </div>
 
       <div>
-        <strong>{listing.host.yearsHosting}</strong>
+        <strong>
+          {listing.host.yearsHosting}
+        </strong>
         <span>Years hosting</span>
       </div>
     </div>
 
+    {/* Host facts */}
     <div className="host-details">
-      <p>{listing.hostDetails.facts[0]}</p>
-      <p>{listing.hostDetails.facts[1]}</p>
+      {listing.hostDetails.facts.map((fact) => (
+        <p key={fact}>{fact}</p>
+      ))}
+    </div>
+
+    {/* Co-hosts */}
+    {listing.hostDetails.coHosts?.length > 0 && (
+      <div className="cohosts-section">
+        <h3>Co-Hosts</h3>
+
+        <div className="cohosts-list">
+          {listing.hostDetails.coHosts.map((coHost) => (
+            <div
+              className="cohost"
+              key={coHost}
+            >
+              <div className="cohost-avatar">
+                {coHost.charAt(0)}
+              </div>
+
+              <span>{coHost}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {/* Host details */}
+    <div className="host-response-details">
+      <h3>Host details</h3>
+
       <p>
         Response rate:{" "}
-        {listing.hostDetails.responseRate}
+        <strong>
+          {listing.hostDetails.responseRate}
+        </strong>
       </p>
-      <p>{listing.hostDetails.responseTime}</p>
+
+      <p>
+        {listing.hostDetails.responseTime}
+      </p>
     </div>
   </div>
 
+  {/* Message host */}
   <button
-    className="secondary-button"
+    className="secondary-button host-message-button"
     type="button"
   >
     Message host
   </button>
+
+  {/* Airbnb-style safety notice */}
+  <p className="host-safety-note">
+    To help protect your payment, always use Airbnb to
+    send money and communicate with hosts.
+  </p>
 </section>
 
               {/* Things to know */}
@@ -523,14 +577,17 @@ function App() {
             </div>
 
             {/* Reservation sidebar */}
-            <div className="listing-sidebar">
-              <ReservationCard
-                pricing={listing.pricing}
-                rating={listing.rating}
-                reviewCount={listing.reviewCount}
-                maxGuests={listing.guestCount}
-              />
-            </div>
+           <div
+  className="listing-sidebar"
+  id="reservation"
+>
+  <ReservationCard
+    pricing={listing.pricing}
+    rating={listing.rating}
+    reviewCount={listing.reviewCount}
+    maxGuests={listing.guestCount}
+  />
+</div>
           </div>
         </div>
       </main>
