@@ -168,6 +168,7 @@ const lightboxTriggerRef = useRef(null);
               <Amenities
                 amenities={listing.amenities}
                 amenityCategories={listing.amenityCategories}
+                  amenityCount={listing.amenityCount}
               />
 
               {/* Photo tour */}

@@ -74,7 +74,8 @@ function AmenityIcon({ name }) {
   );
 }
 
-function Amenities({ amenities, amenityCategories }) {
+function Amenities({ amenities, amenityCategories,  amenityCount,
+ }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const triggerRef = useRef(null);
@@ -82,10 +83,7 @@ function Amenities({ amenities, amenityCategories }) {
 
   const visibleAmenities = amenities.slice(0, 10);
 
-  const totalAmenityCount = amenityCategories.reduce(
-    (total, category) => total + category.items.length,
-    0
-  );
+const totalAmenityCount = amenityCount;
 
   const openModal = (event) => {
     triggerRef.current = event.currentTarget;

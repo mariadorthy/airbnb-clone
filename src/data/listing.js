@@ -36,91 +36,90 @@ export const listing = {
   images: [
   {
     id: "living-room-1-1",
-    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living area with dining space",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165040/eclectic-living-room-with-wall-mounted-tv-unit.jpg",
+    alt: "Living room TV",
   },
 
   {
     id: "living-room-1-2",
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165034/eclectic-living-room-with-traditional-touch.jpg",
     alt: "Living room with sofa",
   },
 
    {
     id: "living-room-1-3",
-    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living area with dining space",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165028/eclectic-living-room-with-book-cabinet.jpg",
+    alt: "Living area with outer view",
   },
-
   {
     id: "living-room-2-1",
-    src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
-    alt: "Second living room",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172100/open-scandinavian-living-room-in-white-and-grey.jpg",
+    alt: "Second living room with sofa and dining",
   },
     {
     id: "living-room-2-2",
-    src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
-    alt: "Second living room",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172113/white-and-grey-scandinavian-living-room-with-tv-unit.jpg",
+    alt: "Second living room with TV",
   },
 
   {
     id: "living-room-2-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172107/open-scandinavian-living-room-with-foyer-space.jpg",
     alt: "Living room additional view",
   },
 
     {
     id: "kitchen-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living room additional view",
+    src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125245/parallel-kitchen-design-sage-green-and-white.jpg",
+    alt: "Kitchen with outer view",
   },
 
       {
     id: "kitchen-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living room additional view",
+    src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125305/sage-green-kitchen-cabinets-with-potted-plant.jpg",
+    alt: "kitchen cabinets",
   },
 
       {
     id: "kitchen-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living room additional view",
+    src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125255/parallel-kitchen-with-sliding-glass-door-to-balcony.jpg",
+    alt: "parallel-kitchen-with-sliding-glass-door-to-balcony",
   },
   
     {
     id: "bedroom-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112527/apartment-bedroom-with-light-wood-laminates.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "bedroom-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112531/ergonomic-bedroom-study-nook.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "bedroom-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112536/soothing-bedroom-with-separate-dressing-area.jpg",
     alt: "Living room additional view",
   },
 
   
     {
     id: "bathroom-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151811/modern-classical-bathroom-design-blue-wall-white-ceramic-tiles.jpeg",
     alt: "Living room additional view",
   },
 
       {
     id: "bathroom-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151642/small-bathroom-interior-glass-partition-shower-area.jpeg",
     alt: "Living room additional view",
   },
 
       {
     id: "bathroom-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151629/bathroom-design-vanity-with-dual-drawers-open-shelf.jpeg",
     alt: "Living room additional view",
   },
 
@@ -142,78 +141,76 @@ export const listing = {
     src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
     alt: "Living room additional view",
   },
-
   
     {
     id: "exterior-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/rear-view-exterior-rendering-768x512.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "exterior-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-cgi-camera-angle-change-768x512.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "exterior-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/side-view-exterior-render-768x512.jpg",
     alt: "Living room additional view",
   },
-
   
     {
     id: "pool-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://cdn.hoog.design/2022/12/22024248/Mari-Zwembaden-Zwembad-villa-Sambeek-03-768x512.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "pool-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://cdn.hoog.design/2022/12/22024515/Mari-Zwembaden-Zwembad-villa-Sambeek-08-768x512.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "pool-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://cdn.hoog.design/2022/12/22024541/Mari-Zwembaden-Zwembad-villa-Sambeek-09-768x512.jpg",
     alt: "Living room additional view",
   },
   
     {
     id: "additional-photos-1-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-rendering-lighting-change-768x512.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "additional-photos-1-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://cdn.hoog.design/2022/12/22024608/Mari-Zwembaden-Zwembad-villa-Sambeek-10-768x512.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "additional-photos-1-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg",
     alt: "Living room additional view",
   },
 
     {
     id: "additional-photos-2-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2020/04/11161349/walk-in-wardrobe-with-dressing-unit.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "additional-photos-2-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2020/04/11163248/lavish-wardrobe-design-with-dressing-unit.jpg",
     alt: "Living room additional view",
   },
 
       {
     id: "additional-photos-2-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+    src: "https://media.designcafe.com/wp-content/uploads/2020/07/29181155/dual-toned-wardrobe-design-with-cabinets-and-drawers-for-storage.jpg",
     alt: "Living room additional view",
   },
 
@@ -393,21 +390,22 @@ export const listing = {
       {
         imageId: "living-room-1-1",
         image:
-          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/20165040/eclectic-living-room-with-wall-mounted-tv-unit.jpg",
         alt: "Living room with sofa and dining area",
       },
       {
         imageId: "living-room-1-2",
         image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/20165034/eclectic-living-room-with-traditional-touch.jpg",
         alt: "Living room interior",
       },
       {
         imageId: "living-room-1-3",
         image:
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/20165028/eclectic-living-room-with-book-cabinet.jpg",
         alt: "Living room and apartment interior",
       },
+
     ],
   },
 
@@ -423,19 +421,19 @@ export const listing = {
       {
         imageId: "living-room-2-1",
         image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/20172100/open-scandinavian-living-room-in-white-and-grey.jpg",
         alt: "Living room with hot tub",
       },
       {
         imageId: "living-room-2-2",
         image:
-          "https://images.unsplash.com/photo-1600607688970-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/20172113/white-and-grey-scandinavian-living-room-with-tv-unit.jpg",
         alt: "Second view of living room",
       },
       {
         imageId: "living-room-2-3",
         image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/20172107/open-scandinavian-living-room-with-foyer-space.jpg",
         alt: "Living room seating area",
       },
     ],
@@ -463,19 +461,19 @@ export const listing = {
       {
         imageId: "kitchen-1",
         image:
-          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2023/09/06125245/parallel-kitchen-design-sage-green-and-white.jpg",
         alt: "Full kitchen",
       },
       {
         imageId: "kitchen-2",
         image:
-          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2023/09/06125305/sage-green-kitchen-cabinets-with-potted-plant.jpg",
         alt: "Kitchen interior",
       },
       {
         imageId: "kitchen-3",
         image:
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2023/09/06125255/parallel-kitchen-with-sliding-glass-door-to-balcony.jpg",
         alt: "Kitchen and dining area",
       },
     ],
@@ -506,19 +504,19 @@ export const listing = {
       {
         imageId: "bedroom-1",
         image:
-          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/10112527/apartment-bedroom-with-light-wood-laminates.jpg",
         alt: "Bedroom with double bed",
       },
       {
         imageId: "bedroom-2",
         image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/10112531/ergonomic-bedroom-study-nook.jpg",
         alt: "Bedroom interior",
       },
       {
         imageId: "bedroom-3",
         image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2022/12/10112536/soothing-bedroom-with-separate-dressing-area.jpg",
         alt: "Bedroom and interior view",
       },
     ],
@@ -539,19 +537,19 @@ export const listing = {
       {
         imageId: "bathroom-1",
         image:
-          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2025/03/30151811/modern-classical-bathroom-design-blue-wall-white-ceramic-tiles.jpeg",
         alt: "Modern bathroom with shower",
       },
       {
         imageId: "bathroom-2",
         image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2025/03/30151642/small-bathroom-interior-glass-partition-shower-area.jpeg",
         alt: "Bathroom interior",
       },
       {
         imageId: "bathroom-3",
         image:
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2025/03/30151629/bathroom-design-vanity-with-dual-drawers-open-shelf.jpeg",
         alt: "Bathroom and interior",
       },
     ],
@@ -599,19 +597,19 @@ export const listing = {
       {
         imageId: "exterior-1",
         image:
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/rear-view-exterior-rendering-768x512.jpg",
         alt: "Exterior of the property",
       },
       {
         imageId: "exterior-2",
         image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-cgi-camera-angle-change-768x512.jpg",
         alt: "Property exterior view",
       },
       {
         imageId: "exterior-3",
         image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/side-view-exterior-render-768x512.jpg",
         alt: "Apartment exterior and surroundings",
       },
     ],
@@ -626,19 +624,19 @@ export const listing = {
       {
         imageId: "pool-1",
         image:
-          "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
+          "https://cdn.hoog.design/2022/12/22024248/Mari-Zwembaden-Zwembad-villa-Sambeek-03-768x512.jpg",
         alt: "Resort swimming pool",
       },
       {
         imageId: "pool-2",
         image:
-          "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1400&q=85",
+          "https://cdn.hoog.design/2022/12/22024515/Mari-Zwembaden-Zwembad-villa-Sambeek-08-768x512.jpg",
         alt: "Swimming pool area",
       },
       {
         imageId: "pool-3",
         image:
-          "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=85",
+          "https://cdn.hoog.design/2022/12/22024541/Mari-Zwembaden-Zwembad-villa-Sambeek-09-768x512.jpg",
         alt: "Outdoor pool",
       },
     ],
@@ -653,19 +651,19 @@ export const listing = {
       {
         imageId: "additional-photos-1-1",
         image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-rendering-lighting-change-768x512.jpg",
         alt: "Apartment interior",
       },
       {
         imageId: "additional-photos-1-2",
         image:
-          "https://images.unsplash.com/photo-1600607688970-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://cdn.hoog.design/2022/12/22024608/Mari-Zwembaden-Zwembad-villa-Sambeek-10-768x512.jpg",
         alt: "Property interior",
       },
       {
         imageId: "additional-photos-1-3",
         image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg",
         alt: "Apartment living area",
       },
     ],
@@ -680,19 +678,19 @@ export const listing = {
       {
         imageId: "additional-photos-2-1",
         image:
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2020/04/11161349/walk-in-wardrobe-with-dressing-unit.jpg",
         alt: "Property interior and exterior view",
       },
       {
         imageId: "additional-photos-2-2",
         image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2020/04/11163248/lavish-wardrobe-design-with-dressing-unit.jpg",
         alt: "Apartment interior",
       },
       {
         imageId: "additional-photos-2-3",
         image:
-          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
+          "https://media.designcafe.com/wp-content/uploads/2020/07/29181155/dual-toned-wardrobe-design-with-cabinets-and-drawers-for-storage.jpg",
         alt: "Living and dining area",
       },
     ],
