@@ -562,7 +562,10 @@ main {
   transition:
     background 0.2s ease,
     transform 0.1s ease;
+      transition: background 0.2s ease;
+
 }
+
 
 .listing-sticky-nav__reservation button:hover {
   background: #e31c5f;
@@ -1798,6 +1801,11 @@ main {
 .photo-tour__thumbnail:focus-visible {
   outline: 2px solid #222;
   outline-offset: 2px;
+}
+
+.photo-tour__thumbnail--active {
+  border-color: var(--text);
+  box-shadow: 0 0 0 1px var(--text);
 }
 
 .photo-tour__thumbnail img {
@@ -3474,4 +3482,140 @@ main {
   color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .site-header__inner {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .host-link {
+    display: none;
+  }
+
+  .listing-sticky-nav__inner {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .listing-sticky-nav__links {
+    gap: 12px;
+    overflow-x: auto;
+    min-width: 0;
+  }
+
+  .listing-sticky-nav__reservation {
+    flex-shrink: 0;
+  }
+
+  .listing-sticky-nav__price {
+    display: none;
+  }
+
+  .page-container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .listing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery__hero {
+    min-height: 260px;
+  }
+
+  .things-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nearby-stays {
+    grid-template-columns: 1fr;
+  }
+
+  .host-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .host-details {
+    grid-template-columns: 1fr;
+  }
+
+  .cohosts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .host-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .reviews-list {
+    grid-template-columns: 1fr;
+  }
+
+  .review-breakdown {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand__name {
+    font-size: 18px;
+  }
+
+  .account-button {
+    padding: 6px;
+  }
+
+  .gallery__secondary {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .gallery__hero {
+    min-height: 220px;
+  }
+
+  .host-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .reservation-card {
+    width: 100%;
+  }
+
+  .listing-sticky-nav__links a {
+    white-space: nowrap;
+  }
 }

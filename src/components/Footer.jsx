@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 function Footer({ groups }) {
+    const [footerMessage, setFooterMessage] = useState("");
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
@@ -10,9 +13,8 @@ function Footer({ groups }) {
               <ul>
                 {group.links.map((link) => (
                   <li key={link}>
-                    <a href={`#${link.toLowerCase().replaceAll(" ", "-")}`}>
-                      {link}
-                    </a>
+                     <span>{link}</span>
+
                   </li>
                 ))}
               </ul>
@@ -20,12 +22,48 @@ function Footer({ groups }) {
           ))}
         </div>
 
-        <div className="footer-bottom">
-          <span>© 2026 Airbnb-style listing demo</span>
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
-          <a href="#sitemap">Sitemap</a>
-        </div>
+       <div className="footer-bottom">
+  <span>© 2026 Airbnb-style listing demo</span>
+
+  <button
+    type="button"
+    onClick={() =>
+      setFooterMessage(
+        "Privacy information is available in this demo only.",
+      )
+    }
+  >
+    Privacy
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      setFooterMessage(
+        "Terms information is available in this demo only.",
+      )
+    }
+  >
+    Terms
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      setFooterMessage(
+        "Sitemap navigation is available in this demo only.",
+      )
+    }
+  >
+    Sitemap
+  </button>
+</div>
+
+{footerMessage && (
+  <p className="interaction-feedback" role="status">
+    {footerMessage}
+  </p>
+)}
       </div>
     </footer>
   );

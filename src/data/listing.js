@@ -651,19 +651,19 @@ export const listing = {
     details: [],
     images: [
       {
-        imageId: "additional-1-1",
+        imageId: "additional-photos-1-1",
         image:
           "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
         alt: "Apartment interior",
       },
       {
-        imageId: "additional-1-2",
+        imageId: "additional-photos-1-2",
         image:
           "https://images.unsplash.com/photo-1600607688970-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
         alt: "Property interior",
       },
       {
-        imageId: "additional-1-3",
+        imageId: "additional-photos-1-3",
         image:
           "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
         alt: "Apartment living area",
@@ -678,19 +678,19 @@ export const listing = {
     details: [],
     images: [
       {
-        imageId: "additional-2-1",
+        imageId: "additional-photos-2-1",
         image:
           "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
         alt: "Property interior and exterior view",
       },
       {
-        imageId: "additional-2-2",
+        imageId: "additional-photos-2-2",
         image:
           "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
         alt: "Apartment interior",
       },
       {
-        imageId: "additional-2-3",
+        imageId: "additional-photos-2-3",
         image:
           "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85",
         alt: "Living and dining area",

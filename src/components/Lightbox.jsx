@@ -146,7 +146,13 @@ function Lightbox({
         </button>
 
         <figure className="lightbox__figure">
-          <img src={image.src} alt={image.alt} />
+<img
+  src={image.src}
+  alt={image.alt}
+  onError={(event) => {
+    event.currentTarget.style.visibility = "hidden";
+  }}
+/>
         </figure>
 
         <button

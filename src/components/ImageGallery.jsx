@@ -50,6 +50,7 @@ function ImageGallery({
               <img
                 src={image.src}
                 alt={image.alt}
+                  loading="lazy"
               />
             </button>
           );

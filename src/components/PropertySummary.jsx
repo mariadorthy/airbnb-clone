@@ -13,11 +13,13 @@ function PropertySummary({ listing }) {
 
       <div className="host-preview">
         <img
-          src={listing.host.avatar}
-          alt={`${listing.host.name}, your host`}
-          className="host-preview__avatar"
-        />
-
+  src={listing.host.avatar}
+  alt={`${listing.host.name}, your host`}
+  className="host-preview__avatar"
+  onError={(event) => {
+    event.currentTarget.style.visibility = "hidden";
+  }}
+/>
         <div>
           <strong>Hosted by {listing.host.name}</strong>
           <span>{listing.host.yearsHosting} years hosting</span>

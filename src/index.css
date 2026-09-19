@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  min-width: 760px;
+  min-width: 0;
 }
 
 #root {

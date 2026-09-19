@@ -18,9 +18,12 @@ import { listing } from "./data/listing";
 function App() {
   const [isPhotoTourOpen, setIsPhotoTourOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+const [reviewsMessage, setReviewsMessage] = useState("");
+const [hostMessage, setHostMessage] = useState("");
+const [cancellationMessage, setCancellationMessage] = useState("");
 
-  const photoTourTriggerRef = useRef(null);
-  const lightboxTriggerRef = useRef(null);
+const photoTourTriggerRef = useRef(null);
+const lightboxTriggerRef = useRef(null);
 
   const openPhotoTour = (triggerElement) => {
     photoTourTriggerRef.current = triggerElement;
@@ -58,6 +61,8 @@ function App() {
     });
   };
 
+
+  
   const showNextPhoto = () => {
     setLightboxIndex((currentIndex) => {
       if (
@@ -115,8 +120,8 @@ function App() {
   aria-labelledby="property-details-title"
 >
   <h2 id="property-details-title">
-    Entire serviced apartment in Candolim, India
-  </h2>
+  Entire serviced apartment in {listing.location}
+</h2>
 
   <p>
     {listing.guestCount} guests · {listing.bedroomCount} bedroom ·{" "}
@@ -348,11 +353,22 @@ function App() {
                 </div>
 
                 <button
-                  className="reviews-show-more"
-                  type="button"
-                >
-                  Show all {listing.reviewCount} reviews
-                </button>
+  className="reviews-show-more"
+  type="button"
+  onClick={() =>
+    setReviewsMessage(
+      `This demo currently displays ${listing.reviews.length} of ${listing.reviewCount} reviews.`,
+    )
+  }
+>
+  View review count
+</button>
+         
+{reviewsMessage && (
+  <p className="interaction-feedback" role="status">
+    {reviewsMessage}
+  </p>
+)}       
               </section>
 
 {/* Host */}
@@ -452,12 +468,23 @@ function App() {
   </div>
 
   {/* Message host */}
-  <button
-    className="secondary-button host-message-button"
-    type="button"
-  >
-    Message host
-  </button>
+<button
+  className="secondary-button host-message-button"
+  type="button"
+  onClick={() =>
+    setHostMessage(
+      "Messaging is available as a demo interaction on this listing.",
+    )
+  }
+>
+  Message host
+</button>
+
+{hostMessage && (
+  <p className="interaction-feedback" role="status">
+    {hostMessage}
+  </p>
+)}
 
   {/* Airbnb-style safety notice */}
   <p className="host-safety-note">
@@ -522,15 +549,26 @@ function App() {
                       }
                     </p>
 
-                    <button
-                      className="text-button"
-                      type="button"
-                    >
-                      {
-                        listing.thingsToKnow
-                          .cancellationPolicy.linkLabel
-                      }
-                    </button>
+                   <button
+  className="text-button"
+  type="button"
+  onClick={() =>
+    setCancellationMessage(
+      "Cancellation policy details are shown above for this demo listing.",
+    )
+  }
+>
+  {
+    listing.thingsToKnow
+      .cancellationPolicy.linkLabel
+  }
+</button>
+
+{cancellationMessage && (
+  <p className="interaction-feedback" role="status">
+    {cancellationMessage}
+  </p>
+)}
                   </div>
                 </div>
               </section>

@@ -4,7 +4,7 @@ function ReservationCard({
   pricing,
   rating,
   reviewCount,
-  maxGuests = 6,
+  maxGuests,
 }) {
   const [checkIn, setCheckIn] = useState(
   "2026-10-18",
@@ -33,22 +33,48 @@ const [guests, setGuests] = useState(2);
     return difference > 0 ? Math.round(difference / 86400000) : 0;
   }, [checkIn, checkOut]);
 
-  const calculatedTotal =
-  pricing.nightly > 0
-    ? pricing.nightly * nights +
-      pricing.cleaningFee +
-      pricing.serviceFee
-    : pricing.total;
+  const [reservationMessage, setReservationMessage] = useState("");
+
+const handleReserve = () => {
+  if (!checkIn || !checkOut) {
+    setReservationMessage("Please select check-in and check-out dates.");
+    return;
+  }
+
+  if (checkIn >= checkOut) {
+    setReservationMessage("Check-out must be after check-in.");
+    return;
+  }
+
+  if (guests < 1 || guests > maxGuests) {
+    setReservationMessage(`Guests must be between 1 and ${maxGuests}.`);
+    return;
+  }
+
+  setReservationMessage(
+    `Reservation request ready for ${guests} ${
+      guests === 1 ? "guest" : "guests"
+    }, from ${checkIn} to ${checkOut}.`,
+  );
+};
+
+  const nightlyPrice =
+  pricing.nights > 0
+    ? pricing.total / pricing.nights
+    : 0;
+
+const calculatedTotal = nights * nightlyPrice;
 
   const handleCheckInChange = (event) => {
-    const nextCheckIn = event.target.value;
+  const nextCheckIn = event.target.value;
 
-    setCheckIn(nextCheckIn);
+  setCheckIn(nextCheckIn);
+  setReservationMessage("");
 
-    if (checkOut && nextCheckIn >= checkOut) {
-      setCheckOut("");
-    }
-  };
+  if (checkOut && nextCheckIn >= checkOut) {
+    setCheckOut("");
+  }
+};
 
   const handleGuestChange = (delta) => {
     setGuests((current) =>
@@ -62,8 +88,10 @@ const [guests, setGuests] = useState(2);
       aria-label="Reservation information"
     >
       <div className="reservation-card__price">
-  <strong>{money(pricing.total)}</strong>
-  <span> for {pricing.nights} nights</span>
+<strong>{money(calculatedTotal)}</strong>
+  <span>
+    {nights > 0 ? ` for ${nights} nights` : " for your stay"}
+  </span>
 </div>
 
       <div className="reservation-card__rating">
@@ -100,14 +128,19 @@ const [guests, setGuests] = useState(2);
           </label>
 
           <input
-            id="check-out"
-            name="check-out"
-            type="date"
-            value={checkOut}
-            min={checkIn || undefined}
-            onChange={(event) => setCheckOut(event.target.value)}
-            aria-label="Checkout date"
-          />
+  id="check-out"
+  name="check-out"
+  type="date"
+  value={checkOut}
+  min={checkIn || undefined}
+  onChange={(event) => {
+    const nextCheckOut = event.target.value;
+
+    setCheckOut(nextCheckOut);
+    setReservationMessage("");
+  }}
+  aria-label="Checkout date"
+/>
         </div>
 
         <div className="reservation-field reservation-field--full">
@@ -145,34 +178,42 @@ const [guests, setGuests] = useState(2);
         </div>
       </div>
 
-      <p className="reservation-feedback" aria-live="polite">
-        {nights > 0
-          ? `${nights} ${nights === 1 ? "night" : "nights"} · ${guests} ${
-              guests === 1 ? "guest" : "guests"
-            }`
-          : "Add dates to see the total for your stay."}
-      </p>
+      {reservationMessage ? (
+  <p className="reservation-feedback" role="status">
+    {reservationMessage}
+  </p>
+) : (
+  <p className="reservation-feedback" aria-live="polite">
+    {nights > 0
+      ? `${nights} nights · ${guests} guests`
+      : "Add dates to see your stay details."}
+  </p>
+)}
 
-      <button className="reserve-button" type="button">
-        Reserve
-      </button>
+      <button
+  className="reserve-button"
+  type="button"
+  onClick={handleReserve}
+>
+  Reserve
+</button>
 
       <p className="reservation-note">
         You won't be charged yet
       </p>
 
-      {nights > 0 ? (
-  <div className="price-breakdown">
+  {nights > 0 ? (
+  <>
     <div className="price-breakdown__total">
-      <strong>
-        {pricing.nights === nights
-          ? `${pricing.nights} nights`
-          : `${nights} nights`}
-      </strong>
-
-      <strong>{money(pricing.total)}</strong>
+  <strong>{nights} nights</strong>
+  <strong>{money(calculatedTotal)}</strong>
+</div>
+    <div>
+      <p className="price-breakdown__note">
+        Price updates based on the selected number of nights.
+      </p>
     </div>
-  </div>
+  </>
 ) : (
   <div className="price-breakdown">
     <div className="price-breakdown__empty">

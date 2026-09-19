@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function PhotoTour({
   images = [],
@@ -9,6 +9,10 @@ function PhotoTour({
 }) {
   const closeButtonRef = useRef(null);
   const photoTourRef = useRef(null);
+
+  const [activeSectionId, setActiveSectionId] = useState(
+  sections[0]?.id ?? "",
+);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -21,6 +25,55 @@ function PhotoTour({
       document.body.style.overflow = previousOverflow;
     };
   }, []);
+
+  useEffect(() => {
+  if (!sections.length) {
+    return undefined;
+  }
+
+  const sectionElements = sections
+    .map((section) =>
+      document.getElementById(
+        `photo-tour-section-${section.id}`,
+      ),
+    )
+    .filter(Boolean);
+
+  if (!sectionElements.length) {
+    return undefined;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort(
+          (a, b) =>
+            b.intersectionRatio - a.intersectionRatio,
+        )[0];
+
+      if (visibleEntry) {
+        const sectionId =
+          visibleEntry.target.id.replace(
+            "photo-tour-section-",
+            "",
+          );
+
+        setActiveSectionId(sectionId);
+      }
+    },
+    {
+      root: photoTourRef.current,
+      threshold: [0.25, 0.5, 0.75],
+    },
+  );
+
+  sectionElements.forEach((element) =>
+    observer.observe(element),
+  );
+
+  return () => observer.disconnect();
+}, [sections]);
 
   useEffect(() => {
     if (isLightboxOpen) {
@@ -155,18 +208,28 @@ function PhotoTour({
 
             return (
               <button
-                key={section.id}
-                type="button"
-                className="photo-tour__thumbnail"
-                onClick={() =>
-                  scrollToSection(section.id)
-                }
-                aria-label={`Go to ${section.title}`}
-              >
+  key={section.id}
+  type="button"
+  className={`photo-tour__thumbnail${
+    activeSectionId === section.id
+      ? " photo-tour__thumbnail--active"
+      : ""
+  }`}
+  onClick={() =>
+    scrollToSection(section.id)
+  }
+  aria-label={`Go to ${section.title}`}
+  aria-current={
+    activeSectionId === section.id
+      ? "true"
+      : undefined
+  }
+>
                 {thumbnail && (
                   <img
                     src={thumbnail.image}
                     alt=""
+                      loading="lazy"
                   />
                 )}
               </button>
@@ -270,14 +333,15 @@ function PhotoTour({
                           aria-label={`Open ${section.title} second photo`}
                         >
                           <img
-                            src={
-                              secondaryImage1.image
-                            }
-                            alt={
-                              secondaryImage1.alt ||
-                              `${section.title} additional photo`
-                            }
-                          />
+  src={
+    secondaryImage1.image
+  }
+  alt={
+    secondaryImage1.alt ||
+    `${section.title} additional photo`
+  }
+  loading="lazy"
+/>
                         </button>
                       </figure>
                     )}
@@ -295,15 +359,16 @@ function PhotoTour({
                           }
                           aria-label={`Open ${section.title} third photo`}
                         >
-                          <img
-                            src={
-                              secondaryImage2.image
-                            }
-                            alt={
-                              secondaryImage2.alt ||
-                              `${section.title} additional photo`
-                            }
-                          />
+                         <img
+  src={
+    secondaryImage2.image
+  }
+  alt={
+    secondaryImage2.alt ||
+    `${section.title} additional photo`
+  }
+  loading="lazy"
+/>
                         </button>
                       </figure>
                     )}
