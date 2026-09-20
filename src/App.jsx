@@ -114,23 +114,8 @@ const lightboxTriggerRef = useRef(null);
 
           <div className="listing-layout">
             <div className="listing-main">
-             {/* Property details below gallery */}
-<section
-  className="property-details"
-  aria-labelledby="property-details-title"
->
-  <h2 id="property-details-title">
-  Entire serviced apartment in {listing.location}
-</h2>
-
-  <p>
-    {listing.guestCount} guests · {listing.bedroomCount} bedroom ·{" "}
-    {listing.bedCount} bed · {listing.bathroomCount} bathroom
-  </p>
-</section>
-
-{/* Property summary / highlights */}
-<PropertySummary listing={listing} />
+              {/* Property summary / highlights */}
+              <PropertySummary listing={listing} />
 
 {/* Sleeping arrangements */}
 <section
@@ -362,7 +347,7 @@ const lightboxTriggerRef = useRef(null);
     )
   }
 >
-  View review count
+  Show all {listing.reviewCount} reviews
 </button>
          
 {reviewsMessage && (
@@ -625,6 +610,9 @@ const lightboxTriggerRef = useRef(null);
     rating={listing.rating}
     reviewCount={listing.reviewCount}
     maxGuests={listing.guestCount}
+    defaultCheckIn={listing.defaultBooking.checkIn}
+    defaultCheckOut={listing.defaultBooking.checkOut}
+    defaultGuests={listing.defaultBooking.guests}
   />
 </div>
           </div>

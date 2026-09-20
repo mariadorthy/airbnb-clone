@@ -1,5 +1,9 @@
 # AI-Native Workflow Documentation
 
+This document was included in the initial repository snapshot (`bda204c`, 2026-09-18) as Phase 9 workflow notes. For the current practical documentation workflow, screenshot process, and prompt-history rules, use [`docs/ai-development/workflow.md`](../ai-development/workflow.md). Do not treat the two files as competing sources: this file records the Phase 9 methodology; the AI-development workflow file is the maintained operator guide.
+
+The multi-agent diagram in section 9 remains **proposed and not implemented**. This repository contains no Cursor rules, skills, `AGENTS.md`, or `.cursor/` project configuration.
+
 ## 1. AI-Native Principles
 
 The engineering workflow for this project follows nine core principles designed to maintain architectural integrity, code quality, and factual precision when collaborating with AI tools.

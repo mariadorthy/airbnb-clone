@@ -5,21 +5,20 @@ function ReservationCard({
   rating,
   reviewCount,
   maxGuests,
+  defaultCheckIn = "2026-10-18",
+  defaultCheckOut = "2026-10-23",
+  defaultGuests = 2,
 }) {
-  const [checkIn, setCheckIn] = useState(
-  "2026-10-18",
-);
-const [checkOut, setCheckOut] = useState(
-  "2026-10-23",
-);
-const [guests, setGuests] = useState(2);
+  const [checkIn, setCheckIn] = useState(defaultCheckIn);
+  const [checkOut, setCheckOut] = useState(defaultCheckOut);
+  const [guests, setGuests] = useState(defaultGuests);
 
   const money = (value) =>
-  new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(value);
+    new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0,
+    }).format(value);
 
   const nights = useMemo(() => {
     if (!checkIn || !checkOut) {
@@ -35,46 +34,45 @@ const [guests, setGuests] = useState(2);
 
   const [reservationMessage, setReservationMessage] = useState("");
 
-const handleReserve = () => {
-  if (!checkIn || !checkOut) {
-    setReservationMessage("Please select check-in and check-out dates.");
-    return;
-  }
+  const handleReserve = () => {
+    if (!checkIn || !checkOut) {
+      setReservationMessage("Please select check-in and check-out dates.");
+      return;
+    }
 
-  if (checkIn >= checkOut) {
-    setReservationMessage("Check-out must be after check-in.");
-    return;
-  }
+    if (checkIn >= checkOut) {
+      setReservationMessage("Check-out must be after check-in.");
+      return;
+    }
 
-  if (guests < 1 || guests > maxGuests) {
-    setReservationMessage(`Guests must be between 1 and ${maxGuests}.`);
-    return;
-  }
+    if (guests < 1 || guests > maxGuests) {
+      setReservationMessage(`Guests must be between 1 and ${maxGuests}.`);
+      return;
+    }
 
-  setReservationMessage(
-    `Reservation request ready for ${guests} ${
-      guests === 1 ? "guest" : "guests"
-    }, from ${checkIn} to ${checkOut}.`,
-  );
-};
+    setReservationMessage(
+      `Reservation request ready for ${guests} ${guests === 1 ? "guest" : "guests"
+      }, from ${checkIn} to ${checkOut}.`,
+    );
+  };
 
   const nightlyPrice =
-  pricing.nights > 0
-    ? pricing.total / pricing.nights
-    : 0;
+    pricing.nights > 0
+      ? pricing.total / pricing.nights
+      : 0;
 
-const calculatedTotal = nights * nightlyPrice;
+  const calculatedTotal = nights * nightlyPrice;
 
   const handleCheckInChange = (event) => {
-  const nextCheckIn = event.target.value;
+    const nextCheckIn = event.target.value;
 
-  setCheckIn(nextCheckIn);
-  setReservationMessage("");
+    setCheckIn(nextCheckIn);
+    setReservationMessage("");
 
-  if (checkOut && nextCheckIn >= checkOut) {
-    setCheckOut("");
-  }
-};
+    if (checkOut && nextCheckIn >= checkOut) {
+      setCheckOut("");
+    }
+  };
 
   const handleGuestChange = (delta) => {
     setGuests((current) =>
@@ -88,11 +86,11 @@ const calculatedTotal = nights * nightlyPrice;
       aria-label="Reservation information"
     >
       <div className="reservation-card__price">
-<strong>{money(calculatedTotal)}</strong>
-  <span>
-    {nights > 0 ? ` for ${nights} nights` : " for your stay"}
-  </span>
-</div>
+        <strong>{money(calculatedTotal)}</strong>
+        <span>
+          {nights > 0 ? ` for ${nights} nights` : " for your stay"}
+        </span>
+      </div>
 
       <div className="reservation-card__rating">
         <span aria-hidden="true">★</span>
@@ -128,19 +126,19 @@ const calculatedTotal = nights * nightlyPrice;
           </label>
 
           <input
-  id="check-out"
-  name="check-out"
-  type="date"
-  value={checkOut}
-  min={checkIn || undefined}
-  onChange={(event) => {
-    const nextCheckOut = event.target.value;
+            id="check-out"
+            name="check-out"
+            type="date"
+            value={checkOut}
+            min={checkIn || undefined}
+            onChange={(event) => {
+              const nextCheckOut = event.target.value;
 
-    setCheckOut(nextCheckOut);
-    setReservationMessage("");
-  }}
-  aria-label="Checkout date"
-/>
+              setCheckOut(nextCheckOut);
+              setReservationMessage("");
+            }}
+            aria-label="Checkout date"
+          />
         </div>
 
         <div className="reservation-field reservation-field--full">
@@ -179,51 +177,51 @@ const calculatedTotal = nights * nightlyPrice;
       </div>
 
       {reservationMessage ? (
-  <p className="reservation-feedback" role="status">
-    {reservationMessage}
-  </p>
-) : (
-  <p className="reservation-feedback" aria-live="polite">
-    {nights > 0
-      ? `${nights} nights · ${guests} guests`
-      : "Add dates to see your stay details."}
-  </p>
-)}
+        <p className="reservation-feedback" role="status">
+          {reservationMessage}
+        </p>
+      ) : (
+        <p className="reservation-feedback" aria-live="polite">
+          {nights > 0
+            ? `${nights} nights · ${guests} guests`
+            : "Add dates to see your stay details."}
+        </p>
+      )}
 
       <button
-  className="reserve-button"
-  type="button"
-  onClick={handleReserve}
->
-  Reserve
-</button>
+        className="reserve-button"
+        type="button"
+        onClick={handleReserve}
+      >
+        Reserve
+      </button>
 
       <p className="reservation-note">
         You won't be charged yet
       </p>
 
-  {nights > 0 ? (
-  <>
-    <div className="price-breakdown__total">
-  <strong>{nights} nights</strong>
-  <strong>{money(calculatedTotal)}</strong>
-</div>
-    <div>
-      <p className="price-breakdown__note">
-        Price updates based on the selected number of nights.
-      </p>
-    </div>
-  </>
-) : (
-  <div className="price-breakdown">
-    <div className="price-breakdown__empty">
-      <span>
-        Select check-in and checkout dates to calculate
-        your stay.
-      </span>
-    </div>
-  </div>
-)}
+      {nights > 0 ? (
+        <>
+          <div className="price-breakdown__total">
+            <strong>{nights} nights</strong>
+            <strong>{money(calculatedTotal)}</strong>
+          </div>
+          <div>
+            <p className="price-breakdown__note">
+              Price updates based on the selected number of nights.
+            </p>
+          </div>
+        </>
+      ) : (
+        <div className="price-breakdown">
+          <div className="price-breakdown__empty">
+            <span>
+              Select check-in and checkout dates to calculate
+              your stay.
+            </span>
+          </div>
+        </div>
+      )}
     </aside>
   );
 }

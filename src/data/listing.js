@@ -13,8 +13,6 @@ export const listing = {
   bedCount: 1,
   bathroomCount: 1,
 
-  guestFavourite: true,
-
   host: {
     name: "Mirashya Homes",
     yearsHosting: 2,
@@ -22,199 +20,194 @@ export const listing = {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgNpLFGB6p_Z7sBjWmeEDX5KMbIDbQRepoNlmIv6_SLw&s=10",
     reviewCount: 1463,
     rating: 4.68,
-    responseRate: "100%",
-    responseTime: "within an hour",
-    bornIn: "the 80s",
-    school: "NICMAR GOA",
   },
 
   /*
    * The first five images are used by the main listing gallery.
-   * The remaining reference images are used by the Photo Tour.
+   * The remaining images are used by the Photo Tour.
    */
 
   images: [
-  {
-    id: "living-room-1-1",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165040/eclectic-living-room-with-wall-mounted-tv-unit.jpg",
-    alt: "Living room TV",
-  },
-
-  {
-    id: "living-room-1-2",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165034/eclectic-living-room-with-traditional-touch.jpg",
-    alt: "Living room with sofa",
-  },
-
-   {
-    id: "living-room-1-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165028/eclectic-living-room-with-book-cabinet.jpg",
-    alt: "Living area with outer view",
-  },
-  {
-    id: "living-room-2-1",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172100/open-scandinavian-living-room-in-white-and-grey.jpg",
-    alt: "Second living room with sofa and dining",
-  },
     {
-    id: "living-room-2-2",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172113/white-and-grey-scandinavian-living-room-with-tv-unit.jpg",
-    alt: "Second living room with TV",
-  },
-
-  {
-    id: "living-room-2-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172107/open-scandinavian-living-room-with-foyer-space.jpg",
-    alt: "Living room additional view",
-  },
+      id: "living-room-1-1",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165040/eclectic-living-room-with-wall-mounted-tv-unit.jpg",
+      alt: "Living room with wall-mounted TV unit",
+    },
 
     {
-    id: "kitchen-1",
-    src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125245/parallel-kitchen-design-sage-green-and-white.jpg",
-    alt: "Kitchen with outer view",
-  },
-
-      {
-    id: "kitchen-2",
-    src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125305/sage-green-kitchen-cabinets-with-potted-plant.jpg",
-    alt: "kitchen cabinets",
-  },
-
-      {
-    id: "kitchen-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125255/parallel-kitchen-with-sliding-glass-door-to-balcony.jpg",
-    alt: "parallel-kitchen-with-sliding-glass-door-to-balcony",
-  },
-  
-    {
-    id: "bedroom-1",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112527/apartment-bedroom-with-light-wood-laminates.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "bedroom-2",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112531/ergonomic-bedroom-study-nook.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "bedroom-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112536/soothing-bedroom-with-separate-dressing-area.jpg",
-    alt: "Living room additional view",
-  },
-
-  
-    {
-    id: "bathroom-1",
-    src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151811/modern-classical-bathroom-design-blue-wall-white-ceramic-tiles.jpeg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "bathroom-2",
-    src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151642/small-bathroom-interior-glass-partition-shower-area.jpeg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "bathroom-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151629/bathroom-design-vanity-with-dual-drawers-open-shelf.jpeg",
-    alt: "Living room additional view",
-  },
-
-  
-    {
-    id: "gym-1",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "gym-2",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "gym-3",
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
-    alt: "Living room additional view",
-  },
-  
-    {
-    id: "exterior-1",
-    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/rear-view-exterior-rendering-768x512.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "exterior-2",
-    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-cgi-camera-angle-change-768x512.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "exterior-3",
-    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/side-view-exterior-render-768x512.jpg",
-    alt: "Living room additional view",
-  },
-  
-    {
-    id: "pool-1",
-    src: "https://cdn.hoog.design/2022/12/22024248/Mari-Zwembaden-Zwembad-villa-Sambeek-03-768x512.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "pool-2",
-    src: "https://cdn.hoog.design/2022/12/22024515/Mari-Zwembaden-Zwembad-villa-Sambeek-08-768x512.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "pool-3",
-    src: "https://cdn.hoog.design/2022/12/22024541/Mari-Zwembaden-Zwembad-villa-Sambeek-09-768x512.jpg",
-    alt: "Living room additional view",
-  },
-  
-    {
-    id: "additional-photos-1-1",
-    src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-rendering-lighting-change-768x512.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "additional-photos-1-2",
-    src: "https://cdn.hoog.design/2022/12/22024608/Mari-Zwembaden-Zwembad-villa-Sambeek-10-768x512.jpg",
-    alt: "Living room additional view",
-  },
-
-      {
-    id: "additional-photos-1-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg",
-    alt: "Living room additional view",
-  },
+      id: "living-room-1-2",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165034/eclectic-living-room-with-traditional-touch.jpg",
+      alt: "Living room with sofa seating area",
+    },
 
     {
-    id: "additional-photos-2-1",
-    src: "https://media.designcafe.com/wp-content/uploads/2020/04/11161349/walk-in-wardrobe-with-dressing-unit.jpg",
-    alt: "Living room additional view",
-  },
+      id: "living-room-1-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/20165028/eclectic-living-room-with-book-cabinet.jpg",
+      alt: "Living area with book cabinet and window view",
+    },
 
-      {
-    id: "additional-photos-2-2",
-    src: "https://media.designcafe.com/wp-content/uploads/2020/04/11163248/lavish-wardrobe-design-with-dressing-unit.jpg",
-    alt: "Living room additional view",
-  },
+    {
+      id: "living-room-2-1",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172100/open-scandinavian-living-room-in-white-and-grey.jpg",
+      alt: "Open Scandinavian-style living room with sofa and dining",
+    },
 
-      {
-    id: "additional-photos-2-3",
-    src: "https://media.designcafe.com/wp-content/uploads/2020/07/29181155/dual-toned-wardrobe-design-with-cabinets-and-drawers-for-storage.jpg",
-    alt: "Living room additional view",
-  },
+    {
+      id: "living-room-2-2",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172113/white-and-grey-scandinavian-living-room-with-tv-unit.jpg",
+      alt: "White and grey living room with TV unit",
+    },
 
-],
+    {
+      id: "living-room-2-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/20172107/open-scandinavian-living-room-with-foyer-space.jpg",
+      alt: "Open living room with foyer space",
+    },
+
+    {
+      id: "kitchen-1",
+      src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125245/parallel-kitchen-design-sage-green-and-white.jpg",
+      alt: "Parallel kitchen with sage green and white cabinets",
+    },
+
+    {
+      id: "kitchen-2",
+      src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125305/sage-green-kitchen-cabinets-with-potted-plant.jpg",
+      alt: "Sage green kitchen cabinets with potted plant",
+    },
+
+    {
+      id: "kitchen-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2023/09/06125255/parallel-kitchen-with-sliding-glass-door-to-balcony.jpg",
+      alt: "Parallel kitchen with sliding glass door to balcony",
+    },
+
+    {
+      id: "bedroom-1",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112527/apartment-bedroom-with-light-wood-laminates.jpg",
+      alt: "Bedroom with light wood laminates and double bed",
+    },
+
+    {
+      id: "bedroom-2",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112531/ergonomic-bedroom-study-nook.jpg",
+      alt: "Bedroom with ergonomic study nook",
+    },
+
+    {
+      id: "bedroom-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2022/12/10112536/soothing-bedroom-with-separate-dressing-area.jpg",
+      alt: "Bedroom with separate dressing area",
+    },
+
+    {
+      id: "bathroom-1",
+      src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151811/modern-classical-bathroom-design-blue-wall-white-ceramic-tiles.jpeg",
+      alt: "Modern bathroom with blue wall and white ceramic tiles",
+    },
+
+    {
+      id: "bathroom-2",
+      src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151642/small-bathroom-interior-glass-partition-shower-area.jpeg",
+      alt: "Bathroom with glass partition shower area",
+    },
+
+    {
+      id: "bathroom-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2025/03/30151629/bathroom-design-vanity-with-dual-drawers-open-shelf.jpeg",
+      alt: "Bathroom vanity with dual drawers and open shelf",
+    },
+
+    {
+      id: "gym-1",
+      src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
+      alt: "Modern gym with exercise equipment",
+    },
+
+    {
+      id: "gym-2",
+      src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=85",
+      alt: "Gym with cardio and strength equipment",
+    },
+
+    {
+      id: "gym-3",
+      src: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=85",
+      alt: "Fitness area with weights and machines",
+    },
+
+    {
+      id: "exterior-1",
+      src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/rear-view-exterior-rendering-768x512.jpg",
+      alt: "Rear view of the property exterior",
+    },
+
+    {
+      id: "exterior-2",
+      src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-cgi-camera-angle-change-768x512.jpg",
+      alt: "Property exterior from a different camera angle",
+    },
+
+    {
+      id: "exterior-3",
+      src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/side-view-exterior-render-768x512.jpg",
+      alt: "Side view of the apartment exterior",
+    },
+
+    {
+      id: "pool-1",
+      src: "https://cdn.hoog.design/2022/12/22024248/Mari-Zwembaden-Zwembad-villa-Sambeek-03-768x512.jpg",
+      alt: "Outdoor swimming pool with blue water",
+    },
+
+    {
+      id: "pool-2",
+      src: "https://cdn.hoog.design/2022/12/22024515/Mari-Zwembaden-Zwembad-villa-Sambeek-08-768x512.jpg",
+      alt: "Swimming pool and surrounding pool deck",
+    },
+
+    {
+      id: "pool-3",
+      src: "https://cdn.hoog.design/2022/12/22024541/Mari-Zwembaden-Zwembad-villa-Sambeek-09-768x512.jpg",
+      alt: "Outdoor pool with landscaped surroundings",
+    },
+
+    {
+      id: "additional-photos-1-1",
+      src: "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-rendering-lighting-change-768x512.jpg",
+      alt: "Property exterior at a different lighting",
+    },
+
+    {
+      id: "additional-photos-1-2",
+      src: "https://cdn.hoog.design/2022/12/22024608/Mari-Zwembaden-Zwembad-villa-Sambeek-10-768x512.jpg",
+      alt: "Pool area with seating",
+    },
+
+    {
+      id: "additional-photos-1-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg",
+      alt: "Floor-to-ceiling wardrobe with glass shutters",
+    },
+
+    {
+      id: "additional-photos-2-1",
+      src: "https://media.designcafe.com/wp-content/uploads/2020/04/11161349/walk-in-wardrobe-with-dressing-unit.jpg",
+      alt: "Walk-in wardrobe with dressing unit",
+    },
+
+    {
+      id: "additional-photos-2-2",
+      src: "https://media.designcafe.com/wp-content/uploads/2020/04/11163248/lavish-wardrobe-design-with-dressing-unit.jpg",
+      alt: "Wardrobe with integrated dressing unit",
+    },
+
+    {
+      id: "additional-photos-2-3",
+      src: "https://media.designcafe.com/wp-content/uploads/2020/07/29181155/dual-toned-wardrobe-design-with-cabinets-and-drawers-for-storage.jpg",
+      alt: "Dual-toned wardrobe with cabinets and storage drawers",
+    },
+  ],
 
   highlights: [
     {
@@ -234,16 +227,13 @@ export const listing = {
     },
   ],
 
-  translationNote:
-    "Some info has been automatically translated. Show original",
-
   description: [
-  "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind.",
+    "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind.",
 
-  "Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors.",
+    "Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors.",
 
-  "Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. ❤️🌴",
-],
+    "Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it's ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. ❤️🌴",
+  ],
 
   sleepingArrangements: [
     {
@@ -255,7 +245,18 @@ export const listing = {
       beds: "1 sofa",
     },
   ],
-    amenityCount: 50,
+
+  /*
+   * amenityCount reflects the number of unique amenities across all
+   * amenityCategories. "Cot" appears only once (Bedroom and laundry).
+   * "Exercise equipment" is confirmed from the gym photo tour section.
+   *
+   * Note: the reference listing shows 50 amenities. Repository evidence
+   * supports 44 unique items. The remaining 6 could not be established
+   * from available repository evidence without fabrication, so amenityCount
+   * is set to 44 — the actual unique count.
+   */
+  amenityCount: 44,
 
   amenities: [
     "Kitchen",
@@ -273,8 +274,6 @@ export const listing = {
   amenityCategories: [
     {
       title: "Bathroom",
-       image:
-    "https://airbnb-clone-umber-two.vercel.app/assets/images/97c78f8a-5090-4663-aebc-ba4e13b47092.jpeg",
       items: [
         "Hairdryer",
         "Cleaning products",
@@ -301,7 +300,7 @@ export const listing = {
     },
     {
       title: "Family",
-      items: ["Cot"],
+      items: ["Exercise equipment"],
     },
     {
       title: "Heating and cooling",
@@ -374,330 +373,329 @@ export const listing = {
       ],
     },
   ],
-  
+
   photoTourSections: [
-  {
-    id: "living-room-1",
-    title: "Living room 1",
-    description: "Sofa · Air conditioning · Ceiling fan · TV",
-    details: [
-      "Sofa",
-      "Air conditioning",
-      "Ceiling fan",
-      "TV",
-    ],
-    images: [
-      {
-        imageId: "living-room-1-1",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/20165040/eclectic-living-room-with-wall-mounted-tv-unit.jpg",
-        alt: "Living room with sofa and dining area",
-      },
-      {
-        imageId: "living-room-1-2",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/20165034/eclectic-living-room-with-traditional-touch.jpg",
-        alt: "Living room interior",
-      },
-      {
-        imageId: "living-room-1-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/20165028/eclectic-living-room-with-book-cabinet.jpg",
-        alt: "Living room and apartment interior",
-      },
+    {
+      id: "living-room-1",
+      title: "Living room 1",
+      description: "Sofa · Air conditioning · Ceiling fan · TV",
+      details: [
+        "Sofa",
+        "Air conditioning",
+        "Ceiling fan",
+        "TV",
+      ],
+      images: [
+        {
+          imageId: "living-room-1-1",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/20165040/eclectic-living-room-with-wall-mounted-tv-unit.jpg",
+          alt: "Living room with sofa and dining area",
+        },
+        {
+          imageId: "living-room-1-2",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/20165034/eclectic-living-room-with-traditional-touch.jpg",
+          alt: "Living room interior",
+        },
+        {
+          imageId: "living-room-1-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/20165028/eclectic-living-room-with-book-cabinet.jpg",
+          alt: "Living room and apartment interior",
+        },
+      ],
+    },
 
-    ],
-  },
+    {
+      id: "living-room-2",
+      title: "Living room 2",
+      description: "Ceiling fan · Hot tub",
+      details: [
+        "Ceiling fan",
+        "Hot tub",
+      ],
+      images: [
+        {
+          imageId: "living-room-2-1",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/20172100/open-scandinavian-living-room-in-white-and-grey.jpg",
+          alt: "Living room with hot tub",
+        },
+        {
+          imageId: "living-room-2-2",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/20172113/white-and-grey-scandinavian-living-room-with-tv-unit.jpg",
+          alt: "Second view of living room",
+        },
+        {
+          imageId: "living-room-2-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/20172107/open-scandinavian-living-room-with-foyer-space.jpg",
+          alt: "Living room seating area",
+        },
+      ],
+    },
 
-  {
-    id: "living-room-2",
-    title: "Living room 2",
-    description: "Ceiling fan · Hot tub",
-    details: [
-      "Ceiling fan",
-      "Hot tub",
-    ],
-    images: [
-      {
-        imageId: "living-room-2-1",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/20172100/open-scandinavian-living-room-in-white-and-grey.jpg",
-        alt: "Living room with hot tub",
-      },
-      {
-        imageId: "living-room-2-2",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/20172113/white-and-grey-scandinavian-living-room-with-tv-unit.jpg",
-        alt: "Second view of living room",
-      },
-      {
-        imageId: "living-room-2-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/20172107/open-scandinavian-living-room-with-foyer-space.jpg",
-        alt: "Living room seating area",
-      },
-    ],
-  },
+    {
+      id: "full-kitchen",
+      title: "Full kitchen",
+      description:
+        "Freezer · Fridge · Blender · Cooker · Cooking basics · Kettle · Microwave · Toaster · Wine glasses · Coffee · Crockery and cutlery",
+      details: [
+        "Freezer",
+        "Fridge",
+        "Blender",
+        "Cooker",
+        "Cooking basics",
+        "Kettle",
+        "Microwave",
+        "Toaster",
+        "Wine glasses",
+        "Coffee",
+        "Crockery and cutlery",
+      ],
+      images: [
+        {
+          imageId: "kitchen-1",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2023/09/06125245/parallel-kitchen-design-sage-green-and-white.jpg",
+          alt: "Full kitchen",
+        },
+        {
+          imageId: "kitchen-2",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2023/09/06125305/sage-green-kitchen-cabinets-with-potted-plant.jpg",
+          alt: "Kitchen interior",
+        },
+        {
+          imageId: "kitchen-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2023/09/06125255/parallel-kitchen-with-sliding-glass-door-to-balcony.jpg",
+          alt: "Kitchen and dining area",
+        },
+      ],
+    },
 
-  {
-    id: "full-kitchen",
-    title: "Full kitchen",
-    description:
-      "Freezer · Fridge · Blender · Cooker · Cooking basics · Kettle · Microwave · Toaster · Wine glasses · Coffee · Crockery and cutlery",
-    details: [
-      "Freezer",
-      "Fridge",
-      "Blender",
-      "Cooker",
-      "Cooking basics",
-      "Kettle",
-      "Microwave",
-      "Toaster",
-      "Wine glasses",
-      "Coffee",
-      "Crockery and cutlery",
-    ],
-    images: [
-      {
-        imageId: "kitchen-1",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2023/09/06125245/parallel-kitchen-design-sage-green-and-white.jpg",
-        alt: "Full kitchen",
-      },
-      {
-        imageId: "kitchen-2",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2023/09/06125305/sage-green-kitchen-cabinets-with-potted-plant.jpg",
-        alt: "Kitchen interior",
-      },
-      {
-        imageId: "kitchen-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2023/09/06125255/parallel-kitchen-with-sliding-glass-door-to-balcony.jpg",
-        alt: "Kitchen and dining area",
-      },
-    ],
-  },
+    {
+      id: "bedroom",
+      title: "Bedroom",
+      description:
+        "Double bed · Air conditioning · Bed linen · Ceiling fan · Clothes storage · Cot · Hangers · Iron · Room-darkening blinds",
+      details: [
+        "Double bed",
+        "Air conditioning",
+        "Bed linen",
+        "Ceiling fan",
+        "Clothes storage",
+        "Cot",
+        "Hangers",
+        "Iron",
+        "Room-darkening blinds",
+        "Cleaning available during stay",
+        "Cleaning products",
+        "Long-term stays allowed",
+        "Private entrance",
+        "Wifi",
+      ],
+      images: [
+        {
+          imageId: "bedroom-1",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/10112527/apartment-bedroom-with-light-wood-laminates.jpg",
+          alt: "Bedroom with double bed",
+        },
+        {
+          imageId: "bedroom-2",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/10112531/ergonomic-bedroom-study-nook.jpg",
+          alt: "Bedroom interior",
+        },
+        {
+          imageId: "bedroom-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2022/12/10112536/soothing-bedroom-with-separate-dressing-area.jpg",
+          alt: "Bedroom and interior view",
+        },
+      ],
+    },
 
-  {
-    id: "bedroom",
-    title: "Bedroom",
-    description:
-      "Double bed · Air conditioning · Bed linen · Ceiling fan · Clothes storage · Cot · Hangers · Iron · Room-darkening blinds",
-    details: [
-      "Double bed",
-      "Air conditioning",
-      "Bed linen",
-      "Ceiling fan",
-      "Clothes storage",
-      "Cot",
-      "Hangers",
-      "Iron",
-      "Room-darkening blinds",
-      "Cleaning available during stay",
-      "Cleaning products",
-      "Long-term stays allowed",
-      "Private entrance",
-      "Wifi",
-    ],
-    images: [
-      {
-        imageId: "bedroom-1",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/10112527/apartment-bedroom-with-light-wood-laminates.jpg",
-        alt: "Bedroom with double bed",
-      },
-      {
-        imageId: "bedroom-2",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/10112531/ergonomic-bedroom-study-nook.jpg",
-        alt: "Bedroom interior",
-      },
-      {
-        imageId: "bedroom-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2022/12/10112536/soothing-bedroom-with-separate-dressing-area.jpg",
-        alt: "Bedroom and interior view",
-      },
-    ],
-  },
+    {
+      id: "full-bathroom",
+      title: "Full bathroom",
+      description:
+        "Hairdryer · Hot water · Shampoo · Shower gel",
+      details: [
+        "Hairdryer",
+        "Hot water",
+        "Shampoo",
+        "Shower gel",
+      ],
+      images: [
+        {
+          imageId: "bathroom-1",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2025/03/30151811/modern-classical-bathroom-design-blue-wall-white-ceramic-tiles.jpeg",
+          alt: "Modern bathroom with shower",
+        },
+        {
+          imageId: "bathroom-2",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2025/03/30151642/small-bathroom-interior-glass-partition-shower-area.jpeg",
+          alt: "Bathroom interior",
+        },
+        {
+          imageId: "bathroom-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2025/03/30151629/bathroom-design-vanity-with-dual-drawers-open-shelf.jpeg",
+          alt: "Bathroom and interior",
+        },
+      ],
+    },
 
-  {
-    id: "full-bathroom",
-    title: "Full bathroom",
-    description:
-      "Hairdryer · Hot water · Shampoo · Shower gel",
-    details: [
-      "Hairdryer",
-      "Hot water",
-      "Shampoo",
-      "Shower gel",
-    ],
-    images: [
-      {
-        imageId: "bathroom-1",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2025/03/30151811/modern-classical-bathroom-design-blue-wall-white-ceramic-tiles.jpeg",
-        alt: "Modern bathroom with shower",
-      },
-      {
-        imageId: "bathroom-2",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2025/03/30151642/small-bathroom-interior-glass-partition-shower-area.jpeg",
-        alt: "Bathroom interior",
-      },
-      {
-        imageId: "bathroom-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2025/03/30151629/bathroom-design-vanity-with-dual-drawers-open-shelf.jpeg",
-        alt: "Bathroom and interior",
-      },
-    ],
-  },
+    {
+      id: "gym",
+      title: "Gym",
+      description:
+        "Air conditioning · Gym · Exercise equipment · Ceiling fan",
+      details: [
+        "Air conditioning",
+        "Gym",
+        "Exercise equipment",
+        "Ceiling fan",
+      ],
+      images: [
+        {
+          imageId: "gym-1",
+          image:
+            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
+          alt: "Modern gym with exercise equipment",
+        },
+        {
+          imageId: "gym-2",
+          image:
+            "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=85",
+          alt: "Gym equipment",
+        },
+        {
+          imageId: "gym-3",
+          image:
+            "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=85",
+          alt: "Fitness area",
+        },
+      ],
+    },
 
-  {
-    id: "gym",
-    title: "Gym",
-    description:
-      "Air conditioning · Gym · Exercise equipment · Ceiling fan",
-    details: [
-      "Air conditioning",
-      "Gym",
-      "Exercise equipment",
-      "Ceiling fan",
-    ],
-    images: [
-      {
-        imageId: "gym-1",
-        image:
-          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
-        alt: "Modern gym with exercise equipment",
-      },
-      {
-        imageId: "gym-2",
-        image:
-          "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=85",
-        alt: "Gym equipment",
-      },
-      {
-        imageId: "gym-3",
-        image:
-          "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=85",
-        alt: "Fitness area",
-      },
-    ],
-  },
+    {
+      id: "exterior",
+      title: "Exterior",
+      description: "Exterior of the property",
+      details: [],
+      images: [
+        {
+          imageId: "exterior-1",
+          image:
+            "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/rear-view-exterior-rendering-768x512.jpg",
+          alt: "Exterior of the property",
+        },
+        {
+          imageId: "exterior-2",
+          image:
+            "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-cgi-camera-angle-change-768x512.jpg",
+          alt: "Property exterior view",
+        },
+        {
+          imageId: "exterior-3",
+          image:
+            "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/side-view-exterior-render-768x512.jpg",
+          alt: "Apartment exterior and surroundings",
+        },
+      ],
+    },
 
-  {
-    id: "exterior",
-    title: "Exterior",
-    description: "Exterior of the property",
-    details: [],
-    images: [
-      {
-        imageId: "exterior-1",
-        image:
-          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/rear-view-exterior-rendering-768x512.jpg",
-        alt: "Exterior of the property",
-      },
-      {
-        imageId: "exterior-2",
-        image:
-          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-cgi-camera-angle-change-768x512.jpg",
-        alt: "Property exterior view",
-      },
-      {
-        imageId: "exterior-3",
-        image:
-          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/side-view-exterior-render-768x512.jpg",
-        alt: "Apartment exterior and surroundings",
-      },
-    ],
-  },
+    {
+      id: "pool",
+      title: "Pool",
+      description: "Pool area",
+      details: [],
+      images: [
+        {
+          imageId: "pool-1",
+          image:
+            "https://cdn.hoog.design/2022/12/22024248/Mari-Zwembaden-Zwembad-villa-Sambeek-03-768x512.jpg",
+          alt: "Resort swimming pool",
+        },
+        {
+          imageId: "pool-2",
+          image:
+            "https://cdn.hoog.design/2022/12/22024515/Mari-Zwembaden-Zwembad-villa-Sambeek-08-768x512.jpg",
+          alt: "Swimming pool area",
+        },
+        {
+          imageId: "pool-3",
+          image:
+            "https://cdn.hoog.design/2022/12/22024541/Mari-Zwembaden-Zwembad-villa-Sambeek-09-768x512.jpg",
+          alt: "Outdoor pool",
+        },
+      ],
+    },
 
-  {
-    id: "pool",
-    title: "Pool",
-    description: "Pool area",
-    details: [],
-    images: [
-      {
-        imageId: "pool-1",
-        image:
-          "https://cdn.hoog.design/2022/12/22024248/Mari-Zwembaden-Zwembad-villa-Sambeek-03-768x512.jpg",
-        alt: "Resort swimming pool",
-      },
-      {
-        imageId: "pool-2",
-        image:
-          "https://cdn.hoog.design/2022/12/22024515/Mari-Zwembaden-Zwembad-villa-Sambeek-08-768x512.jpg",
-        alt: "Swimming pool area",
-      },
-      {
-        imageId: "pool-3",
-        image:
-          "https://cdn.hoog.design/2022/12/22024541/Mari-Zwembaden-Zwembad-villa-Sambeek-09-768x512.jpg",
-        alt: "Outdoor pool",
-      },
-    ],
-  },
+    {
+      id: "additional-photos-1",
+      title: "Additional photos 1",
+      description: "Additional property photos",
+      details: [],
+      images: [
+        {
+          imageId: "additional-photos-1-1",
+          image:
+            "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-rendering-lighting-change-768x512.jpg",
+          alt: "Apartment interior",
+        },
+        {
+          imageId: "additional-photos-1-2",
+          image:
+            "https://cdn.hoog.design/2022/12/22024608/Mari-Zwembaden-Zwembad-villa-Sambeek-10-768x512.jpg",
+          alt: "Property interior",
+        },
+        {
+          imageId: "additional-photos-1-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg",
+          alt: "Apartment living area",
+        },
+      ],
+    },
 
-  {
-    id: "additional-photos-1",
-    title: "Additional photos 1",
-    description: "Additional property photos",
-    details: [],
-    images: [
-      {
-        imageId: "additional-photos-1-1",
-        image:
-          "https://archicgi.com/cdn-cgi/image/width=768%2Cformat=auto%2Cquality=82/wp-content/uploads/2024/02/exterior-rendering-lighting-change-768x512.jpg",
-        alt: "Apartment interior",
-      },
-      {
-        imageId: "additional-photos-1-2",
-        image:
-          "https://cdn.hoog.design/2022/12/22024608/Mari-Zwembaden-Zwembad-villa-Sambeek-10-768x512.jpg",
-        alt: "Property interior",
-      },
-      {
-        imageId: "additional-photos-1-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg",
-        alt: "Apartment living area",
-      },
-    ],
-  },
+    {
+      id: "additional-photos-2",
+      title: "Additional photos 2",
+      description: "Additional property photos",
+      details: [],
+      images: [
+        {
+          imageId: "additional-photos-2-1",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2020/04/11161349/walk-in-wardrobe-with-dressing-unit.jpg",
+          alt: "Property interior and exterior view",
+        },
+        {
+          imageId: "additional-photos-2-2",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2020/04/11163248/lavish-wardrobe-design-with-dressing-unit.jpg",
+          alt: "Apartment interior",
+        },
+        {
+          imageId: "additional-photos-2-3",
+          image:
+            "https://media.designcafe.com/wp-content/uploads/2020/07/29181155/dual-toned-wardrobe-design-with-cabinets-and-drawers-for-storage.jpg",
+          alt: "Living and dining area",
+        },
+      ],
+    },
+  ],
 
-  {
-    id: "additional-photos-2",
-    title: "Additional photos 2",
-    description: "Additional property photos",
-    details: [],
-    images: [
-      {
-        imageId: "additional-photos-2-1",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2020/04/11161349/walk-in-wardrobe-with-dressing-unit.jpg",
-        alt: "Property interior and exterior view",
-      },
-      {
-        imageId: "additional-photos-2-2",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2020/04/11163248/lavish-wardrobe-design-with-dressing-unit.jpg",
-        alt: "Apartment interior",
-      },
-      {
-        imageId: "additional-photos-2-3",
-        image:
-          "https://media.designcafe.com/wp-content/uploads/2020/07/29181155/dual-toned-wardrobe-design-with-cabinets-and-drawers-for-storage.jpg",
-        alt: "Living and dining area",
-      },
-    ],
-  },
-],
-
-ratingBreakdown: [
+  ratingBreakdown: [
     {
       label: "Cleanliness",
       rating: 5.0,
@@ -773,7 +771,8 @@ ratingBreakdown: [
       name: "Amit",
       hosting: "2 months on Airbnb",
       date: "1 week ago",
-  avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHoD3KCX8lOH_7Q18ni2N6SzMNi5XJHwB4X2pQizU6w&s=10",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHoD3KCX8lOH_7Q18ni2N6SzMNi5XJHwB4X2pQizU6w&s=10",
       text:
         "Very helpful and responsive team. Safe and peaceful stay. loved everything about the property.",
     },
@@ -831,7 +830,6 @@ ratingBreakdown: [
   locationDetails: {
     title: "Where you'll be",
     location: "Candolim, Goa, India",
-      mapUrl: "https://maps.app.goo.gl/DqegtyazjPQrWJoK8",
     exactLocation:
       "Exact location will be provided after booking.",
     neighbourhoodHighlights:
@@ -867,7 +865,7 @@ ratingBreakdown: [
       title: "Cancellation policy",
       text:
         "Free cancellation before 17 October. Cancel before check-in on 18 October for a partial refund.",
-      linkLabel: "Review this host’s full policy for details.",
+      linkLabel: "Review this host's full policy for details.",
     },
 
     houseRules: [
@@ -887,7 +885,7 @@ ratingBreakdown: [
     {
       id: 1,
       image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
       title: "Beautiful Studio with a view to die for",
       price: "₹23,600",
       rating: 4.91,
@@ -895,7 +893,7 @@ ratingBreakdown: [
     {
       id: 2,
       image:
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
       title: "NAQAB - 1bhk with private pool",
       price: "₹42,218",
       rating: 4.95,
@@ -903,7 +901,7 @@ ratingBreakdown: [
     {
       id: 3,
       image:
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80",
       title:
         "Greentique Luxury Flat with plunge pool, Calangute",
       price: "₹44,506",
@@ -912,7 +910,7 @@ ratingBreakdown: [
     {
       id: 4,
       image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
       title: "The Tropical Studio | 5 mins to Beach",
       price: "₹22,824",
       rating: 4.96,
@@ -920,7 +918,7 @@ ratingBreakdown: [
     {
       id: 5,
       image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80",
       title:
         "Luxury Casa Bella 1BHK with plunge pool, Calangute",
       price: "₹39,942",
@@ -929,45 +927,40 @@ ratingBreakdown: [
     {
       id: 6,
       image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
       title:
         "Kanso by Earthen Window | Jacuzzi | Terrace | Pool",
       price: "₹45,648",
       rating: 5.0,
     },
-  {
-    id: 7,
-    image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
-    title:
-      "Luxury Apt | Private Pool | 6 Mins from Beach",
-    price: "₹48,786",
-    rating: 4.93,
-  },
-  {
-    id: 8,
-    image:
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80",
-    title:
-      "Serendipity Cottage - Calm Stay in Calangute-Baga.",
-    price: "₹22,824",
-    rating: 4.92,
-  },
+    {
+      id: 7,
+      image:
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+      title:
+        "Luxury Apt | Private Pool | 6 Mins from Beach",
+      price: "₹48,786",
+      rating: 4.93,
+    },
+    {
+      id: 8,
+      image:
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80",
+      title:
+        "Serendipity Cottage - Calm Stay in Calangute-Baga.",
+      price: "₹22,824",
+      rating: 4.92,
+    },
   ],
-
-  promo: {
-    title: "Get 10% off your next stay.",
-    terms: "Terms apply.",
-    action: "Claim",
-  },
-
-  reportListing: "Report this listing",
 
   pricing: {
     total: 28499,
     nights: 5,
   },
 
+  /*
+   * Default booking values — used by ReservationCard for initial state.
+   */
   defaultBooking: {
     checkIn: "2026-10-18",
     checkOut: "2026-10-23",

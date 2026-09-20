@@ -1,4 +1,19 @@
-# System Architecture Document
+﻿# System Architecture Document
+
+## Documentation maintenance note (updated 2026-09-20 — Prompt B final pass)
+
+This file was originally written during Phase 9 (2026-09-18). Sections 2, 4, 5, and 11 have been updated to reflect the final implementation state after the Prompt B pass. All version numbers, component trees, and state descriptions now match the current source.
+
+**Items confirmed up to date after Prompt B:**
+
+- Dependency versions in Section 2 match the current package.json.
+- ListingStickyNav is included in the component tree in Section 4.
+- Section 5 Amenities state correctly describes the modal (isModalOpen) rather than an old showAll toggle.
+- Section 5 ReservationCard state reflects actual default values and defaultBooking prop wiring.
+- Section 11 image sources reflect the multi-CDN reality (Design Cafe, archicgi.com, hoog.design, Unsplash).
+The PlantUML source [`architecture-diagram-code.puml`](./architecture-diagram-code.puml) and rendered image [`architecture-diagram.png`](./architecture-diagram.png) describe a **proposed production-scale marketplace**. They are **not** a diagram of the current static frontend.
+
+The operational AI workflow for later documentation work lives in [`docs/ai-development/workflow.md`](../ai-development/workflow.md). The original Phase 9 workflow notes remain in [`ai-native-workflow.md`](./ai-native-workflow.md).
 
 ## 1. Purpose and Evidence Boundary
 
@@ -11,7 +26,7 @@ All statements in this architecture document are explicitly classified into one 
 *   **Source Verified:** Directly confirmed through static code analysis of the provided project source files (`package.json`, `src/App.jsx`, `src/data/listing.js`, `src/components/*`, `src/App.css`, `src/index.css`).
 *   **Locally Verified:** Confirmed through local terminal executions provided in the current environment context.
     *   `npm run lint`: PASS (ESLint exited without errors).
-    *   `npm run build`: PASS (`dist/index.html` 0.47 kB, `dist/assets/index-CQUY_IPM.css` 16.96 kB, `dist/assets/index-DLq7IdNf.js` 240.21 kB).
+    *   `npm run build`: PASS (`dist/index.html` 0.47 kB, `dist/assets/index-CrhrXBO5.css` 29.33 kB, `dist/assets/index-D4tz3Rbp.js` 273.10 kB). Re-verified Prompt B 2026-09-20.
     *   `npm run dev`: PASS (Dev server started on `http://localhost:5173/`).
 *   **Historical Evidence:** Sourced from project records covering Phases 0 through 8. These capture engineering context but do not substitute for real-time automated tests or browser verification.
 *   **Browser Verified:** NOT VERIFIED. No automated end-to-end browser runtime, visual regression, or browser DOM inspection tests were executed in this phase.
@@ -25,11 +40,11 @@ Based on static inspection of `package.json` and local execution outputs:
 
 | Layer | Technology | Version / Specification | Source / Verification Details |
 | :--- | :--- | :--- | :--- |
-| **Framework / Library** | React | `^19.0.0` | Specified in `package.json` |
-| **DOM Engine** | React DOM | `^19.0.0` | Specified in `package.json` |
-| **Build Tool / Bundler** | Vite | Declared: `^6.2.0`<br>Observed CLI: `v8.3.0` | `package.json` specifies range `^6.2.0`; resolved CLI during `npm run build` reports `v8.3.0` |
-| **Linting** | ESLint | `^9.21.0` | Specified in `package.json` |
-| **Compiler / Plugin** | `@vitejs/plugin-react` | `^4.3.4` | Specified in `package.json` |
+| **Framework / Library** | React | `^19.2.8` | Specified in `package.json` (updated Prompt B) |
+| **DOM Engine** | React DOM | `^19.2.8` | Specified in `package.json` (updated Prompt B) |
+| **Build Tool / Bundler** | Vite | `^8.3.0` | `package.json` specifies `^8.3.0`; CLI reports `v8.3.0` (updated Prompt B) |
+| **Linting** | ESLint | `^10.10.0` | Specified in `package.json` (updated Prompt B) |
+| **Compiler / Plugin** | `@vitejs/plugin-react` | `^6.1.1` | Specified in `package.json` (updated Prompt B) |
 | **Language** | JavaScript (JSX) | ESNext / React JSX | Source inspection |
 | **Styling** | Vanilla CSS | Custom Properties, Flexbox, CSS Grid | `src/App.css`, `src/index.css` |
 | **State Management** | Native React Hooks | `useState`, `useMemo`, `useRef`, `useEffect` | Source inspection |
@@ -72,6 +87,7 @@ Derived directly from `src/App.jsx` imports and JSX render tree:
 
 App (src/App.jsx)
 ├── Header (src/components/Header.jsx)
+├── ListingStickyNav (src/components/ListingStickyNav.jsx)
 ├── ListingHeader (src/components/ListingHeader.jsx)
 ├── ImageGallery (src/components/ImageGallery.jsx)
 ├── [Main Layout Grid Container]
@@ -87,8 +103,7 @@ App (src/App.jsx)
 
 ```
 
-*Note: Dedicated sub-components such as `Location`, `Reviews`, or `Host` are not present as individual files in `src/components/`. Host details are rendered directly within `PropertySummary`.*
-
+*Note: ListingStickyNav renders the sticky navigation bar (Photos / Amenities / Reviews / Location / price / Reserve) that appears under the site header. Dedicated sub-components for Location, Reviews, Host, Things to know, Nearby stays, and Footer sections are not present as individual files in `src/components/`; those sections are composed inline in `src/App.jsx`.*
 ---
 
 ## 5. State Ownership
@@ -106,9 +121,9 @@ Inspected from source implementations across all components:
 *   `shareFeedback` (`useState("")`): Text message state displaying feedback on share actions.
 
 ### `ReservationCard.jsx`
-*   `checkIn` (`useState("")`): Date string (`YYYY-MM-DD`).
-*   `checkOut` (`useState("")`): Date string (`YYYY-MM-DD`).
-*   `guests` (`useState(1)`): Guest count integer.
+*   `checkIn` (`useState(defaultCheckIn)`): Date string (`YYYY-MM-DD`). Default: `2026-10-18` (from `listing.defaultBooking.checkIn`).
+*   `checkOut` (`useState(defaultCheckOut)`): Date string (`YYYY-MM-DD`). Default: `2026-10-23` (from `listing.defaultBooking.checkOut`).
+*   `guests` (`useState(defaultGuests)`): Guest count integer. Default: `2` (from `listing.defaultBooking.guests`). `maxGuests` = `listing.guestCount` = `3`.
 *   `nights` (`useMemo`): Computed integer difference between `checkIn` and `checkOut`.
 *   `subtotal` & `total`: Derived numerical values calculated during rendering.
 
@@ -116,7 +131,7 @@ Inspected from source implementations across all components:
 *   `expanded` (`useState(false)`): Toggles between collapsed and full description paragraph list.
 
 ### `Amenities.jsx`
-*   `showAll` (`useState(false)`): Toggles between truncated slice (4 items) and full list of amenities.
+*   `isModalOpen` (`useState(false)`): Controls visibility of the amenities modal dialog. Opening triggers scroll lock, focuses modal container, activates Escape/Tab keyboard handling. Closing returns focus to trigger button.
 
 ### `PhotoTour.jsx`
 *   `closeButtonRef` (`useRef(null)`): Reference for initial close button focus on mount.
@@ -236,7 +251,7 @@ Styles are organized across two global stylesheets:
 ## 11. Current Limitations
 
 *   **Static Local Data:** All property details, reviews, host info, and image lists originate from static JavaScript object exports (`src/data/listing.js`).
-*   **External Image Dependencies:** Photos rely on external image URLs (Unsplash CDN) requiring internet connectivity to load.
+*   **External Image Dependencies:** Photos rely on external image URLs from multiple CDNs — Design Cafe (`media.designcafe.com`), archicgi.com (`archicgi.com`), Hoog Design (`cdn.hoog.design`), and Unsplash (`images.unsplash.com`) — requiring internet connectivity. The Unsplash-only description from earlier phases is outdated.
 *   **No Backend or Persistence:** Reservations and user interactions (e.g., clicking "Reserve", saving, changing dates) do not persist to a database or call an external API.
 *   **No Client-Side Routing:** Header and footer links rely on hash anchors (`#stay`, `#terms`) rather than client-side routing.
 *   **Browser Verification Limitations:** Visual rendering accuracy, screen-reader audio, image loading states, and live DOM focus trapping have not been confirmed via browser automated test runs.

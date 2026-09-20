@@ -1,5 +1,9 @@
 @startuml
-title Production-Scale Vacation Rental Marketplace
+' PROPOSED / FUTURE architecture. This diagram is not the currently implemented system.
+' The implemented application is a static React + Vite listing page with no backend,
+' database, API gateway, search service, payments, or message queue.
+' See docs/architecture/system-architecture.md (Current vs Future).
+title Production-Scale Vacation Rental Marketplace (Proposed)
 
 top to bottom direction
 
