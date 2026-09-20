@@ -1,0 +1,188 @@
+@startuml
+title Production-Scale Vacation Rental Marketplace
+
+top to bottom direction
+
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam packageStyle rectangle
+skinparam linetype ortho
+
+skinparam nodesep 25
+skinparam ranksep 40
+
+skinparam package {
+    BackgroundColor #FAFAFA
+    BorderColor #555555
+    FontColor #222222
+}
+
+skinparam component {
+    BackgroundColor #FFFFFF
+    BorderColor #555555
+}
+
+skinparam database {
+    BackgroundColor #FFF8DC
+    BorderColor #9A7B20
+}
+
+skinparam cloud {
+    BackgroundColor #F1F7FF
+    BorderColor #4A78A8
+}
+
+skinparam queue {
+    BackgroundColor #EEF6FF
+    BorderColor #4A78A8
+}
+
+
+' =====================================================
+' USER
+' =====================================================
+
+actor "Guest / Host" as User
+
+
+' =====================================================
+' FRONTEND / EDGE
+' =====================================================
+
+package "Frontend & Edge" as Frontend {
+
+    component "CDN / Edge Network" as CDN
+
+    package "Web Application" as WebApp {
+
+        component "Listing Page" as ListingPage
+        component "Photo Tour" as PhotoTour
+        component "Lightbox" as Lightbox
+
+        ListingPage --> PhotoTour : Show all photos
+        ListingPage --> Lightbox : Hero image
+        PhotoTour --> Lightbox : Select photo
+        Lightbox --> Lightbox : ← / → navigation
+    }
+}
+
+User --> CDN
+CDN --> WebApp
+
+
+' =====================================================
+' API / BACKEND
+' =====================================================
+
+package "Marketplace Backend" as Backend {
+
+    component "API Gateway" as API
+
+    component "Listing Service" as Listing
+    component "Search Service" as Search
+    component "Booking Service" as Booking
+    component "User / Host Service" as UserService
+    component "Review Service" as Review
+    component "Notification Service" as Notification
+
+    API --> Listing
+    API --> Search
+    API --> Booking
+    API --> UserService
+    API --> Review
+}
+
+
+WebApp --> API : API Requests
+
+
+' =====================================================
+' DATA PLATFORM
+' =====================================================
+
+package "Data Platform" as Data {
+
+    database "Primary Database\nPostgreSQL" as DB
+
+    database "Read Replicas" as Replica
+
+    database "Redis Cache" as Redis
+
+    database "Search Index\nOpenSearch / Elasticsearch" as SearchDB
+
+    folder "Object Storage\nProperty Images" as Storage
+
+    queue "Message Queue" as Queue
+}
+
+
+Listing --> DB
+UserService --> DB
+Review --> DB
+Booking --> DB
+
+DB --> Replica
+
+Search --> SearchDB
+Search --> Redis
+
+Booking --> Redis
+Listing --> Storage
+
+Storage --> CDN : Images
+
+Booking --> Queue
+Review --> Queue
+Notification --> Queue
+
+
+' =====================================================
+' EXTERNAL SERVICES
+' =====================================================
+
+package "External Services" as External {
+
+    component "Payment Provider" as Payment
+    component "Maps / Geolocation" as Maps
+    component "Email / SMS" as Messaging
+}
+
+Booking --> Payment
+Search --> Maps
+Notification --> Messaging
+
+
+' =====================================================
+' DEPLOYMENT & OPERATIONS
+' =====================================================
+
+package "Deployment & Operations" as Ops {
+
+    component "CI/CD Pipeline" as CICD
+    component "Container / Compute Platform" as Compute
+    component "Monitoring & Logging" as Monitoring
+    component "Error Tracking" as Errors
+}
+
+CICD --> Compute
+Compute ..> Backend : deploys
+
+Monitoring ..> Compute
+Monitoring ..> API
+Monitoring ..> DB
+Monitoring ..> Queue
+
+Errors ..> WebApp
+Errors ..> Backend
+
+
+' =====================================================
+' HIGH-LEVEL LAYER ALIGNMENT
+' =====================================================
+
+Frontend -[hidden]down-> Backend
+Backend -[hidden]down-> Data
+Data -[hidden]down-> External
+External -[hidden]down-> Ops
+
+@enduml
